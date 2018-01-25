@@ -1,5 +1,7 @@
+/* MAIN */
 body {
-  background-image: url(../images/DOTA2.jpg);
+  background: url(../images/DOTA2-01.jpg);
+  background-blend-mode: lighten;
   background-size: cover;
   height: 100%;
   background-repeat: no-repeat;
@@ -9,15 +11,29 @@ body {
 time {
   font-weight: bold;
 }
-figure {
+img {
   max-width: 50%;
   display: block;
   height: auto;
   margin: auto;
 }
-
+figcaption p, h1 {
+  text-align: center;
+}
 ul, h2 {
     margin-left: auto;
     margin-right: auto;
     width: 25em;
+}
+/* FOOTER */
+footer {
+  text-align: center;
+  color: rgba(45, 45, 45, 0.4)
+}
+footer a {
+  text-decoration: none;
+  color: rgba(45, 45, 45, 0.4)
+}
+footer a:hover {
+  color: green;
 }
