@@ -34,6 +34,10 @@ footer a {
   text-decoration: none;
   color: rgba(45, 45, 45, 0.4)
 }
-footer a:hover {
+a:hover {
   color: green;
+}
+aside {
+  text-align: center;
+
 }
