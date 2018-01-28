@@ -12,38 +12,38 @@
    <h1>Survey Form</h1>
  </header>
  <main>
-<form>
+<form id="box-container">
   <h2>Why do you procrastinate?</h2>
   <p>Reqired fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
   <section class="inputFields">
     <h3>Contact Information</h3>
       <p>
-        <label for="name">
+        <label for="name" class="left">
           <strong><abbr title="required">*</abbr></strong>
           <span>Name:</span>
         </label>
-        <input type="text" id="name" name="fullName" placeholder="Enter your name here" required>
+        <input class="right" type="text" id="name" name="fullName" placeholder="Enter your name here" required>
       </p>
       <p>
-        <label for="email">
+        <label class="left" for="email">
           <strong><abbr title="required">*</abbr></strong>
           <span>Email:</span>
           </label>
-        <input type="text" id="email" name="email" placeholder="Enter your email here" required>
+        <input class="right" type="text" id="email" name="email" placeholder="Enter your email here" required>
       </p>
       <p>
-        <label for="age">
+        <label class="left" for="age">
           <strong><abbr title="required">*</abbr></strong>
           <span>Age:</span>
         </label>
-        <input type="number" id="age" name="age" placeholder="Enter your age here" required>
+        <input class="right" type="number" id="age" name="age" placeholder="Enter your age here" required>
       </p>
       <p>
-        <label for="gender">
+        <label class="left" for="gender">
           <strong><abbr title="required">*</abbr></strong>
           <span>Gender:</span>
         </label>
-        <select id="gender" name="gender" placeholder="Pick a gender please">
+        <select class="right" id="gender" name="gender" placeholder="Pick a gender please">
           <option value="" disabled selected>Select your gender...</option>
           <option value="male">Male</option>
           <option value="female">Female</option>
@@ -53,10 +53,10 @@
     </section>
     <section class="empStat">
       <p>
-        <label for="employmentStatus">
+        <label class="left" for="employmentStatus">
           <span>Employment status:</span>
         </label>
-        <select id="employmentStatus">
+        <select class="right" id="employmentStatus">
           <option value="" disabled selected>Select your employment status</option>
           <option value="unemployed">Unemployed</option>
           <option value="student">Student</option>
@@ -70,8 +70,8 @@
     </section>
     <section>
       <fieldset>
-        <legend>Biggest reason you procrastinate</legend>
-        <ul>
+        <legend class="left">Biggest reason you procrastinate</legend>
+        <ul class="right">
           <li>
             <label for="title_1">
               <input type="radio" id="title_1" name="title">
@@ -112,10 +112,10 @@
     </section>
     <section>
       <p>
-        <label for="benefit">
+        <label class="left" for="benefit">
           <span>What do you think is the benefit from this behaviour</span>
         </label>
-        <select id="benefit">
+        <select class="right" id="benefit">
           <option value="" disabled selected>Select a benefit</option>
           <option value="lazyTime">More time to be lazy</option>
           <option value="moreSleep">More sleep</option>
@@ -126,10 +126,10 @@
     </section>
     <section>
       <p>
-        <label for="comment">
+        <label class="left" for="comment">
           <span>Any comments or suggestions?</span>
         </label>
-        <textarea id="comment" placeholder="Enter your comment here..."></textarea>
+        <textarea class="right" id="comment" placeholder="Enter your comment here..."></textarea>
       </p>
     </section>
     <section>
