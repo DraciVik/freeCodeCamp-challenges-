@@ -19,7 +19,24 @@ input[type="text"], input[type="number"] {
 select {
   padding: 0.3rem 1rem;
 }
-
+.name, .email, .age, .gender {
+  display: flex;
+  justify-content: center;
+}
+.name span {
+  padding-right: 1rem;
+}
+.email span {
+  padding-right: 1rem;
+}
+.age span {
+  padding-right: 1rem;
+}
+/*
+.inputFields {
+  display: flex;
+}
+*/
 #box-container {
   display: flex;
   flex-direction: column;
@@ -31,3 +48,4 @@ select {
 .right {
   align-items: flex-start;
 }
+*/
