@@ -21,3 +21,31 @@ ul li {
   display: flex;
   flex-flow: column wrap;
 }
+
+.name {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  flex-flow: row wrap;
+  font-family: "Open Sans", inherit;
+}
+.name > * {
+  margin:0.3em 1em;
+}
+.left {
+  padding: 0.3em 1em;
+  margin: 8px 0;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+.right {
+  display: flex;
+  justify-content: flex-start;
+  flex: 1 1 4em;
+  border-radius: 4px;
+}
+input[type=text]:focus {
+    border: 3px solid green;
+}
