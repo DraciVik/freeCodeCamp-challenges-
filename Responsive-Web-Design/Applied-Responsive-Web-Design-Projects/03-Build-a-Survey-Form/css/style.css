@@ -9,7 +9,7 @@ form {
   border-radius: 4px;
   width: 50%; */
   width:90%;
-  max-width: 500px;
+  max-width: 700px;
   min-height: 500px;
   margin:auto;
   background: rgba(255, 255, 255, 0.2);
@@ -26,7 +26,7 @@ ul li {
   flex-flow: column wrap;
 }
 
-.inputFlex {
+.inputFlex, .gender {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -34,15 +34,27 @@ ul li {
   font-family: "Open Sans", inherit;
   align-items: baseline;
 }
-.inputFlex > * {
+.inputFlex > *, .gender > * {
   margin: 0.3em 1em;
+}
+.gender label {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1 1 50px;
+}
+.gender select {
+  display: flex;
+  padding: 0.2em 1em;
+  margin: 8px 5em 8px 0;
+  justify-content: flex-start;
+  flex: 1 1 200px;
 }
 .inputFlex input {
   padding: 0.5em 1em;
   margin: 8px 2em 8px 0;
   display: flex;
   justify-content: flex-start;
-  flex: 1 1 100px;
+  flex: 1 1 300px;
   /* border: 2px solid red; */
 }
 .inputFlex label {
