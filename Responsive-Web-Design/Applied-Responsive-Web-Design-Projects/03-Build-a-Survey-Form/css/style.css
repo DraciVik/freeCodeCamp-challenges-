@@ -23,7 +23,7 @@ ul li {
   flex-flow: column wrap;
 }
 
-.inputFlex, .gender, .empStat  {
+.inputFlex, .gender, .empStat {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -37,12 +37,13 @@ ul li {
 .gender label, .empStat label {
   display: flex;
   justify-content: flex-end;
-  flex: 0 1 200px;
+  flex: 0 1 141px;
+  /* border: 1px solid red; */
 }
 .gender select, .empStat select {
-  display: flex;
   padding: 0.2em 1em;
-  margin: 8px 0;
+  margin: 8px 8.4em 8px 0;
+  display: flex;
   justify-content: flex-start;
   flex: 0 1 300px;
 }
@@ -54,10 +55,24 @@ ul li {
   flex: 0 1 300px;
 }
 .inputFlex label {
+  box-sizing: border-box;
   display: flex;
   justify-content: flex-end;
-  flex: 0 1 50px;
+  flex: 0 1 60px;
+  /* border: 1px solid red; */
 }
 input[type="text"]:focus, input[type="number"]:focus, select[class="right"]:focus {
     border: 3px solid green;
+}
+ul {
+  display: flex;
+  align-items: center;
+}
+ul li {
+  box-sizing: border-box;
+  margin: 5px;
+  width: 25%;
+  margin
+
+  /* border: 1px solid red; */
 }
