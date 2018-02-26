@@ -3,11 +3,6 @@ background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
 }
 
 form {
-  /* background: rgba(255, 255, 255, 0.2);
-  margin: 0 auto;
-  padding: 20px;
-  border-radius: 4px;
-  width: 50%; */
   width:90%;
   max-width: 700px;
   min-height: 500px;
@@ -36,60 +31,43 @@ ul li {
 }
 .inputFlex > *, .gender > * {
   margin: 0.3em 1em;
+  /* border: 1px solid red; */
 }
 .gender label {
   display: flex;
   justify-content: flex-end;
-  flex: 1 1 50px;
+  flex: 0 1 50px;
 }
 .gender select {
   display: flex;
   padding: 0.2em 1em;
-  margin: 8px 5em 8px 0;
+  margin: 8px 0;
   justify-content: flex-start;
-  flex: 1 1 200px;
+  flex: 0 1 270px;
+  /* border: 1px solid red; */
 }
 .inputFlex input {
   padding: 0.5em 1em;
-  margin: 8px 2em 8px 0;
+  margin: 8px 0;
   display: flex;
   justify-content: flex-start;
-  flex: 1 1 300px;
+  flex: 0 1 250px;
   /* border: 2px solid red; */
 }
 .inputFlex label {
   display: flex;
   justify-content: flex-end;
-  flex: 1 1 50px;
+  flex: 0 1 50px;
   /* border: 2px solid green; */
 }
 input[type=text]:focus {
     border: 3px solid green;
 }
-/* .name {
-  box-sizing: border-box;
+ul {
   display: flex;
-  justify-content: center;
-  border: 2px solid red;
-  flex-flow: row wrap;
-  font-family: "Open Sans", inherit;
+  flex-flow: column wrap;
+  align-content: flex start;
 }
-.name > * {
-  margin:0.3em 1em;
+.centerText {
+  text-align: center;
 }
-.left {
-  padding: 0.3em 1em;
-  margin: 8px 0;
-  display: flex;
-  justify-content: flex-end;
-  flex: 1;
-}
-.right {
-  display: flex;
-  justify-content: flex-start;
-  flex: 1 1 4em;
-  border-radius: 4px;
-}
-input[type=text]:focus {
-    border: 3px solid green;
-} */

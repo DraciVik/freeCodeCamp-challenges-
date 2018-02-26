@@ -13,10 +13,10 @@
  </header>
  <main>
 <form id="box-container">
-  <h2>Why do you procrastinate?</h2>
-  <p>Reqired fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
+  <h2 class="centerText">Why do you procrastinate?</h2>
+  <p class="centerText">Reqired fields are followed by <strong><abbr title="required">*</abbr></strong>.</p>
   <section class="inputFields">
-    <h3>Contact Information</h3>
+    <h3 class="centerText">Contact Information</h3>
       <p class="name inputFlex">
         <label for="name" class="left">
           <abbr title="required">*</abbr>
@@ -51,26 +51,9 @@
         </select>
       </p>
     </section>
-    <section class="empStat">
-      <p>
-        <label class="left" for="employmentStatus">
-          <span>Employment status:</span>
-        </label>
-        <select class="right" id="employmentStatus">
-          <option value="" disabled selected>Select your employment status</option>
-          <option value="unemployed">Unemployed</option>
-          <option value="student">Student</option>
-          <option value="inBetween">In between jobs</option>
-          <option value="workingUnder5">In the work force under 5 years</option>
-          <option value="workingAbove5">Working above 5 years</option>
-          <option value="retured">Retired</option>
-          <option value="other">Other</option>
-        </select>
-      </p>
-    </section>
     <section class="radioButtons">
       <fieldset>
-        <legend class="left">Biggest reason you procrastinate</legend>
+        <legend class="centerText">Biggest reason you procrastinate</legend>
         <ul class="right">
           <li>
             <label for="title_1">
@@ -102,6 +85,7 @@
               Your time managament sucks
             </label>
           </li>
+          <li>
             <label for="title_6">
               <input type="radio" id="title_6" name="title">
               You just want to see the world burn
