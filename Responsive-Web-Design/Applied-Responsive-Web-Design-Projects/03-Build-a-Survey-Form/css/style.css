@@ -90,3 +90,30 @@ textarea {
     resize: none;
 }
 /* button*/
+
+button[type="submit"] {
+	box-sizing: border-box;
+	border-radius: 0px 2px 2px 0px;
+	background: #8B798C;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: white;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	cursor: pointer;
+  margin-bottom: 10px;
+}
+button[type="submit"]:hover {
+	background: #C17CCF;
+}
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+.submitBtn {
+  flex: 0 1 200px;
+}
