@@ -6,7 +6,7 @@ form {
   width:90%;
   max-width: 700px;
   min-height: 500px;
-  margin:auto;
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.2);
 }
 h1 {
@@ -112,8 +112,25 @@ button[type="submit"]:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* border: 1px solid red; */
 }
 .submitBtn {
   flex: 0 1 200px;
+}
+
+/* Media Query */
+@media (max-width: 450px) {
+  form {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0 2em;
+  }
+  header, .form-submit {
+	padding: 2% 5%;
+  }
+.inputFlex, .gender, .benefit, .comment {
+  justify-content: flex-start;
+  flex-basis: 100px;
+  /* border: 1px solid red; */
+}
+
 }
