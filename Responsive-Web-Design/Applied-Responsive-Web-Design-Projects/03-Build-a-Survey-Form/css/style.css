@@ -16,11 +16,6 @@ ul li {
   list-style: none;
 }
 
-#section {
-  display: flex;
-  flex-flow: column wrap;
-}
-
 .inputFlex, .gender, .benefit, .comment {
   box-sizing: border-box;
   display: flex;
@@ -119,18 +114,38 @@ button[type="submit"]:hover {
 
 /* Media Query */
 @media (max-width: 450px) {
+  body {
+  padding: 0px;
+  margin: 0px;
+  }
   form {
   width: 100%;
-  margin: 0 auto;
-  padding: 1em 0 2em;
   }
   header, .form-submit {
-	padding: 2% 5%;
+	padding: 0;
   }
 .inputFlex, .gender, .benefit, .comment {
   justify-content: flex-start;
-  flex-basis: 100px;
   /* border: 1px solid red; */
 }
-
+.inputFlex input, .gender select {
+  margin: 8px 0;
+  justify-content: flex-start;
+  flex: 1 1 100%;
+}
+.inputFlex label, .gender label {
+  justify-content: flex-start;
+  flex: 1 1 100%;
+}
+.inputFlex > *, .gender > *, .benefit > *, .comment > * {
+  margin: 0;
+}
+.benefit, .comment {
+  text-align: center;
+}
+.benefit select, .comment select {
+  padding: 0.2em 1em;
+  justify-content: center;
+  flex: 0 1 100%;
+}
 }
