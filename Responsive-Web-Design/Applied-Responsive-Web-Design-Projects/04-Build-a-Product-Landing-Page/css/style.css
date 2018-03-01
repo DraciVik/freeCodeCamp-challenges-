@@ -1,0 +1,40 @@
+
+#header-img, .navigation li {
+  display: inline;
+}
+.navigation, #header {
+  list-style: none;
+  display: flex;
+}
+#header {
+  width: 100%;
+  justify-content: space-between;
+}
+#header-img {
+max-width: 100%;
+height: auto;
+}
+.navigation li {
+  font-size: 2em;
+  margin: 10px 20px;
+}
+.navigation li a {
+  text-decoration: none;
+  color: black;
+}
+.navigation li a:link {
+    text-decoration: none;
+}
+.navigation li a:visited {
+    text-decoration: none;
+}
+.navigation li a:hover {
+    text-decoration: underline;
+}
+.navigation li a:active {
+    text-decoration: underline;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
