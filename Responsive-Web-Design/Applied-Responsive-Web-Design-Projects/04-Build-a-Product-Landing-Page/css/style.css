@@ -38,3 +38,27 @@ h1 {
   margin: 0;
   padding: 0;
 }
+#services {
+  display: flex;
+  justify-content: center;
+  margin: 5em 0;
+}
+.offeredServices {
+  box-sizing: content-box;
+  display: flex;
+  flex-flow: column nowrap;
+  border: 1px solid gold;
+  width: 50%;
+}
+.offeredServices h3, .offeredServices p {
+  display: flex;
+  width: 100%;
+}
+h3 {
+  margin: 0px;
+  font-size: 1.5em;
+}
+p {
+  width: 100%;
+  margin: 0 0 100px 0;
+}
