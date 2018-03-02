@@ -92,3 +92,12 @@ p {
   color: #FFF;
   margin-bottom: 8px;
 }
+.poster-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+body {
+  display: flex;
+  flex-flow: column wrap;
+}
