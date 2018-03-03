@@ -111,7 +111,18 @@ button[type="submit"]:hover {
 .submitBtn {
   flex: 0 1 200px;
 }
-
+.form-skills {
+	display: flex;
+	flex-wrap: wrap;
+  flex-flow: row;
+	justify-content: space-between;
+}
+.form-skills li {
+	width: 33%;
+}
+#checkbox {
+  /* display: flex; */
+}
 /* Media Query */
 @media (max-width: 450px) {
   body {
@@ -147,5 +158,8 @@ button[type="submit"]:hover {
   padding: 0.2em 1em;
   justify-content: center;
   flex: 0 1 100%;
+}
+.form-skill li {
+  flex-direction: column;
 }
 }
