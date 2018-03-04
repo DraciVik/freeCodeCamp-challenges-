@@ -9,12 +9,11 @@
 </head>
 <body>
   <header id="header">
-    <h1><img src="img/panevski-i-sinovi-company-logo-2.png" id="header-img" alt="Panevski&Sinovi logo"></h1>
     <nav id="nav-bar">
       <ul class="navigation">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#delivery">Delivery</a></li>
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#products">Products</a></li>
+        <li><a class="nav-link" href="#pricing">Pricing</a></li>
       </ul>
     </nav>
   </header>
@@ -38,7 +37,7 @@
           Westcountry Commercial Doors and Shutters
         </p>
       </section>
-      <section class="pricing-grid">
+      <section class="pricing-grid" id="pricing">
 
         <div class="plan plan1">
 
@@ -87,7 +86,7 @@
         </div>
 
       </section>
-      <form id="form">
+      <form id="form" action="mailto:https://www.freecodecamp.com/email-submit">
         <p> Like what you see? Register below for our newsletter</p>
         <section class="email">
           <label for="email">
@@ -96,22 +95,12 @@
           <input type="email" pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" name="email" id="email" placeholder="Enter your email here" required>
         </section>
         <section class="button">
-          <button type="submit" id="submit" class="form-submit submitBtn">Submit</button>
+          <input type="submit" id="submit" class="form-submit submitBtn"></input>
         </section>
       </form>
   </main>
   <footer>
         <p>Made by <a href="https://github.com/DraciVik" target="_blank">Viktor Stojanov</a>
   </footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-
-    $(function() {
-      $('.toggleNav').on('click',function() {
-        $('.flex-nav ul').toggleClass('open');
-      });
-    });
-
-  </script>
 </body>
 </html>

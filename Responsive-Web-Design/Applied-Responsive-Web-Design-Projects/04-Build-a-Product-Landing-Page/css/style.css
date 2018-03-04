@@ -1,15 +1,12 @@
-
-#header-img, .navigation li {
-  display: inline;
-}
 .navigation, #header {
   list-style: none;
   display: flex;
 }
 #header {
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
 }
+
 #header-img {
 max-width: 100%;
 height: auto;
@@ -196,7 +193,7 @@ input[type="email"] {
   height: 1.5rem;
   border: 1px solid gold;
 }
-button[type="submit"] {
+input[type="submit"] {
   margin-top: 15px;
 	box-sizing: border-box;
 	border-radius: 0px 2px 2px 0px;
@@ -211,7 +208,7 @@ button[type="submit"] {
 	cursor: pointer;
   margin-bottom: 10px;
 }
-button[type="submit"]:hover {
+input[type="submit"]:hover {
 	background: #C17CCF;
 }
 .button {
@@ -221,9 +218,6 @@ button[type="submit"]:hover {
 }
 .submitBtn {
   flex: 0 1 200px;
-}
-.toggleNav {
-  display: none;
 }
 
 @media (max-width: 750px) {
