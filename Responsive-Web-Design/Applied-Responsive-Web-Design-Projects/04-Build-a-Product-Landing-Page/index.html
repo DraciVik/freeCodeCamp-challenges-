@@ -87,9 +87,31 @@
         </div>
 
       </section>
+      <form id="form">
+        <p> Like what you see? Register below for our newsletter</p>
+        <section class="email">
+          <label for="email">
+            <span>Email:</span>
+            </label>
+          <input type="email" pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" name="email" id="email" placeholder="Enter your email here" required>
+        </section>
+        <section class="button">
+          <button type="submit" id="submit" class="form-submit submitBtn">Submit</button>
+        </section>
+      </form>
   </main>
   <footer>
         <p>Made by <a href="https://github.com/DraciVik" target="_blank">Viktor Stojanov</a>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('.flex-nav ul').toggleClass('open');
+      });
+    });
+
+  </script>
 </body>
 </html>

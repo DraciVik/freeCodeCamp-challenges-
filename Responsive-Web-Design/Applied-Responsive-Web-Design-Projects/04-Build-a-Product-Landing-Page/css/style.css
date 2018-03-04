@@ -152,6 +152,7 @@ a:hover {
   max-width:750px;
   margin: 0 auto;
   display:flex;
+  flex-wrap: wrap;
   align-items:center;
 }
 
@@ -162,7 +163,7 @@ a:hover {
   border-radius: 4px;
   text-align: center;
 
-  flex:1;
+  flex: 1;
   display:flex;
   flex-wrap:wrap;
 
@@ -174,4 +175,75 @@ a:hover {
 
 .plan .cta {
   align-self:flex-end;
+}
+#form p {
+  font-size: 1.3rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+.email label {
+  flex: 0 1 auto;
+}
+.email {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+input[type="email"] {
+  width: 300px;
+  flex: 0 1 300px;
+  height: 1.5rem;
+  border: 1px solid gold;
+}
+button[type="submit"] {
+  margin-top: 15px;
+	box-sizing: border-box;
+	border-radius: 0px 2px 2px 0px;
+	background: #8B798C;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: white;
+	padding: 0.35em 0.75em;
+	border: none;
+	font-size: 1.1em;
+	text-decoration: none;
+	cursor: pointer;
+  margin-bottom: 10px;
+}
+button[type="submit"]:hover {
+	background: #C17CCF;
+}
+.button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.submitBtn {
+  flex: 0 1 200px;
+}
+.toggleNav {
+  display: none;
+}
+
+@media (max-width: 750px) {
+  .plan {
+    flex-flow: column no-wrap;
+    flex: 1 1 100%;
+  }
+  #header {
+    display: flex;
+    flex-direction: column;
+  }
+  .navigation {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  .navigation li {
+    text-align: center;
+    }
+}
+@media (max-width: 450px) {
+  .email {
+    justify-content: flex-start;
 }
