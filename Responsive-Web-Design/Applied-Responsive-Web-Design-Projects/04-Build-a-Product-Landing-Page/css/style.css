@@ -58,7 +58,7 @@ h3 {
   margin: 0px;
   font-size: 1.5em;
 }
-p {
+#services p {
   width: 100%;
   margin: 0 0 100px 0;
 }
@@ -97,7 +97,81 @@ p {
   flex-flow: column wrap;
   justify-content: center;
 }
-body {
-  display: flex;
-  flex-flow: column wrap;
+
+/*pricing grid */
+.plan ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.plan ul li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding:10px;
+}
+
+.plan ul li:last-child {
+  border-bottom: 0;
+}
+
+.plan a {
+  text-decoration: none;
+  background:#FEFF00;
+  padding:10px;
+  color:black;
+  border-radius:4px;
+}
+
+
+.plan h2 {
+  text-transform: uppercase;
+  color:white;
+  letter-spacing: 2px;
+  text-shadow:3px 3px 0 rgba(0,0,0,0.1);
+}
+
+.price {
+  font-size: 50px;
+  font-family: serif;
+  margin: 10px 0;
+}
+footer {
+  text-align: center;
+  color: rgba(45, 45, 45, 0.4)
+}
+footer a {
+  text-decoration: none;
+  color: rgba(65, 65, 65, 0.4)
+}
+a:hover {
+  color: green;
+}
+
+/* Flex Container!!! */
+.pricing-grid {
+  max-width:750px;
+  margin: 0 auto;
+  display:flex;
+  align-items:center;
+}
+
+.plan {
+  background-color:rgba(0,0,0,0.2);
+  margin:20px;
+  padding:20px;
+  border-radius: 4px;
+  text-align: center;
+
+  flex:1;
+  display:flex;
+  flex-wrap:wrap;
+
+}
+
+.plan > * {
+  flex:1 1 100%;
+}
+
+.plan .cta {
+  align-self:flex-end;
 }
