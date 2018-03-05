@@ -14,16 +14,18 @@
       <ul>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#anatomy">Anatomy of an HTML element</a></li>
+        <li><a href="#attributes">Attributes</a></li>
       </ul>
     </nav>
   </header>
   <main id="main">
+  <section>
     <h2 id="introduction">Introduction</h2>
     <p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.  For example, take the following line of content:</p>
     <code>My cat is very grumpy</code>
     <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph <code>&lt;p&gt;</code> element:</p>
     <pre><code>&lt;p&gt;My cat is very grumpy&lt;p&gt;</code></pre>
-    <pre><code><strong>Note</strong>: Elements in HTML are case-insensitive, i.e. they can be written in uppercase or lowercase. For example, a &lt;title&gt; element could be written as &lt;title&gt;, &lt;TITLE&gt;, &lt;Title&gt;, &lt;TiTlE&gt;, etc., and it will work fine. Best practice, however, is to write all elements lowercase for consistency, readability, and other reasons.</code></pre>
+    <p><strong>Note</strong>: Elements in HTML are case-insensitive, i.e. they can be written in uppercase or lowercase. For example, a &lt;title&gt; element could be written as &lt;title&gt;, &lt;TITLE&gt;, &lt;Title&gt;, &lt;TiTlE&gt;, etc., and it will work fine. Best practice, however, is to write all elements lowercase for consistency, readability, and other reasons.</p>
     <h2 id="anatomy">Anatomy of an HTML element</h2>
     <p>Let's explore our paragraph element a bit further:</p>
     <img src="img/anatomy.png" alt="A picture detailing the anatomy of a paragraph">
@@ -48,9 +50,62 @@
       </ul>
       <p>Take the following example:</p>
       <pre><code>&lt;em&gt;first&lt;/em&gt;&lt;em&gt;second&lt;/em&gt;&lt;em&gt;third&lt;/em&gt;&lt;p&gt;fourth&lt;/p&gt;&lt;p&gt;fifth&lt;/p&gt;&lt;p&gt;sixth&lt;/p&gt;</code></pre>
-<p><em> is an inline element, so as you can see below, the first three elements sit on the same line as one another with no space in between. On the other hand, <p> is a block-level element, so each element appears on a new line, with space above and below each (the spacing is due to default CSS styling that the browser applies to paragraphs).</p>
+      <p>&lt;em&gt; is an inline element, so as you can see below, the first three elements sit on the same line as one another with no space in between. On the other hand, &lt;p&gt; is a block-level element, so each element appears on a new line, with space above and below each (the spacing is due to default CSS styling that the browser applies to paragraphs).</p>
+      <pre><code><em>first</em><em>second</em><em>third</em>
+      <p>fourth</p><p>fifth</p><p>sixth</p></code></pre>
+      <p><strong>Note:</strong> HTML5 redefined the element categories in HTML5. While these definitions are more accurate and less ambiguous than the ones that went before, they are a lot more complicated to understand than "block" and "inline", so we will stick with these throughout this topic.</p>
+      <p><strong>Note:</strong> The terms "block" and "inline", as used in this topic, should not be confused with the types of CSS boxes with the same names. While they correlate by default, changing the CSS display type doesn't change the category of the element and doesn't affect which elements it can contain and which elements it can be contained in. One of the reasons why HTML5 dropped these terms was to prevent this rather common confusion.</p>
+      <h3>Empty elements</h3>
+      <p>Not all elements follow the above pattern of opening tag, content, closing tag. Some elements consist only of a single tag, which is usually used to insert/embed something in the document at the place it is included. For example, the &lt;img&gt; element embeds an image file onto a page in the position it is included in:</p>
+        <pre><code>&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</code></pre>
+      <p>This would output the following on your page:</p>
+      <img src="img/firefox-icon.png" alt="The firefox logo">
+      <p><strong>Note:</strong>Empty elements are also sometimes called void elements.</p>
+      <h2 id="attribute">Attributes</h2>
+      <p>Elements can also have attributes, which look like this:</p>
+      <img src="img/attribute.png" alt="A picture detailing the anatomy of an attribute">
+      <p>Attributes contain extra information about the element which you don't want to appear in the actual content. In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
+        <br><br>
+      An attribute should have:</p>
+      <ol>
+        <li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)</li>
+        <li>The attribute name, followed by an equals sign.</li>
+        <li>An attribute value, with opening and closing quote marks wrapped around it.</li>
+      </ol>
+      <h3>Boolean attributes</h3>
+      <p>You'll sometimes see attributes written without values — this is perfectly allowed. These are called boolean attributes, and they can only have one value, which is generally the same as the attribute name. As an example, take the <code>disabled</code> attribute, which you can assign to form input elements if you want them to be disabled (greyed out) so the user can't enter any data in them.</p>
+      <pre><code>&lt;input type="text" disabled="disabled"&gt;</code></pre>
+      <p>As shorthand, it is perfectly allowable to write this as follows (we've also included a non-disabled form input element for reference, to give you more of an idea what is going on):</p>
+      <pre><code>&lt;input type="text" disabled&gt;
 
+      &lt;input type="text"&gt;</code></pre>
+      <p>Both will give you an output as follows:</p>
+      <input type="text" disabled><input type="text">
+      <h3>Omitting quotes around attribute values</h3>
+      <p>When you look around the World Wide Web, you'll come across all kind of strange markup styles, including attribute values without quotes. This is allowable in certain circumstances, but will break your markup in others. For example, if we revisit our link example from earlier, we could write a basic version with only the <code>href</code> attribute, like this:</p>
+
+      <pre><code>&lt;a href=https://www.mozilla.org/>favourite website&lt;/a&gt;</code></pre>
+      <p>However, as soon as we add the <code>title</code> attribute in this style, things will go wrong:</p>
+
+      <pre><code>&lt;a href=https://www.mozilla.org/ title=The Mozilla homepage>favourite website&lt;/a&gt;</code></pre>
+      <p>At this point the browser will misinterpret your markup, thinking that the title attribute is actually three attributes — a title attribute with the value "The", and two boolean attributes, <code>Mozilla</code> and <code>homepage</code>. This is obviously not what was intended, and will cause errors or unexpected behavior in the code, as seen in the live example below. Try hovering over the link to see what the title text is!</p>
+      <pre><a href=https://www.mozilla.org/ title=The Mozilla homepage>favourite website</a></pre>
+      <p>Our advice is to always include the attribute quotes — it avoids such problems, and results in more readable code too.</p>
+      <h3>Single or double quotes?</h3>
+      <p>In this article you'll notice that the attributes are all wrapped in double quotes. You might however see single quotes in some people's HTML. This is purely a matter of style, and you can feel free to choose which one you prefer. Both the following lines are equivalent:</p>
+
+      <pre><code>&lt;a href="http://www.example.com"&gt;A link to my example.&lt;/a&gt;
+
+      &lt;a href='http://www.example.com'&gt;A link to my example.&lt;/a&gt;</code></pre>
+      <p>You should however make sure you don't mix them together. The following will go wrong!</p>
+
+      <pre><code>&lt;a href="http://www.example.com'&gt;A link to my example.&lt;/a&gt;</code></pre>
+      <p>If you've used one type of quote in your HTML, you can include the other type of quote without causing any problems:</p>
+
+      <pre><code>&lt;a href="http://www.example.com" title="Isn't this fun?"&gt;A link to my example.&lt;/a&gt;</code></pre>
+      <p>However if you want to include a quote within the quotes where both the quotes are of the same type(single quote or double quote), you'll have to use HTML entities for the quotes.</p>
   </main>
+</section>
 
 </body>
 </html>
