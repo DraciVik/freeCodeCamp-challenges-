@@ -13,7 +13,7 @@
     <nav id="nav-bar">
       <ul>
         <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#anatomy">Anatomy of an HTML element</a></li>
+        <li><a href="#anatomyOfElement">Anatomy of an HTML element</a></li>
         <li><a href="#attributes">Attributes</a></li>
       </ul>
     </nav>
@@ -22,11 +22,11 @@
   <section>
     <h2 id="introduction">Introduction</h2>
     <p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.  For example, take the following line of content:</p>
-    <code>My cat is very grumpy</code>
+    <pre><code>My cat is very grumpy</code></pre>
     <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph <code>&lt;p&gt;</code> element:</p>
     <pre><code>&lt;p&gt;My cat is very grumpy&lt;p&gt;</code></pre>
-    <p><strong>Note</strong>: Elements in HTML are case-insensitive, i.e. they can be written in uppercase or lowercase. For example, a &lt;title&gt; element could be written as &lt;title&gt;, &lt;TITLE&gt;, &lt;Title&gt;, &lt;TiTlE&gt;, etc., and it will work fine. Best practice, however, is to write all elements lowercase for consistency, readability, and other reasons.</p>
-    <h2 id="anatomy">Anatomy of an HTML element</h2>
+    <p class="note"><strong>Note</strong>: Elements in HTML are case-insensitive, i.e. they can be written in uppercase or lowercase. For example, a <code>&lt;title&gt;</code> element could be written as <code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, <code>&lt;TiTlE&gt;</code>, etc., and it will work fine. Best practice, however, is to write all elements lowercase for consistency, readability, and other reasons.</p>
+    <h2 id="anatomyOfElement">Anatomy of an HTML element</h2>
     <p>Let's explore our paragraph element a bit further:</p>
     <img src="img/anatomy.png" alt="A picture detailing the anatomy of a paragraph">
     <p>The main parts of our element are:</p>
@@ -53,15 +53,15 @@
       <p>&lt;em&gt; is an inline element, so as you can see below, the first three elements sit on the same line as one another with no space in between. On the other hand, &lt;p&gt; is a block-level element, so each element appears on a new line, with space above and below each (the spacing is due to default CSS styling that the browser applies to paragraphs).</p>
       <pre><code><em>first</em><em>second</em><em>third</em>
       <p>fourth</p><p>fifth</p><p>sixth</p></code></pre>
-      <p><strong>Note:</strong> HTML5 redefined the element categories in HTML5. While these definitions are more accurate and less ambiguous than the ones that went before, they are a lot more complicated to understand than "block" and "inline", so we will stick with these throughout this topic.</p>
-      <p><strong>Note:</strong> The terms "block" and "inline", as used in this topic, should not be confused with the types of CSS boxes with the same names. While they correlate by default, changing the CSS display type doesn't change the category of the element and doesn't affect which elements it can contain and which elements it can be contained in. One of the reasons why HTML5 dropped these terms was to prevent this rather common confusion.</p>
+      <p class="note"><strong>Note:</strong> HTML5 redefined the element categories in HTML5. While these definitions are more accurate and less ambiguous than the ones that went before, they are a lot more complicated to understand than "block" and "inline", so we will stick with these throughout this topic.</p>
+      <p class="note"><strong>Note:</strong> The terms "block" and "inline", as used in this topic, should not be confused with the types of CSS boxes with the same names. While they correlate by default, changing the CSS display type doesn't change the category of the element and doesn't affect which elements it can contain and which elements it can be contained in. One of the reasons why HTML5 dropped these terms was to prevent this rather common confusion.</p>
       <h3>Empty elements</h3>
       <p>Not all elements follow the above pattern of opening tag, content, closing tag. Some elements consist only of a single tag, which is usually used to insert/embed something in the document at the place it is included. For example, the &lt;img&gt; element embeds an image file onto a page in the position it is included in:</p>
         <pre><code>&lt;img src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"&gt;</code></pre>
       <p>This would output the following on your page:</p>
       <img src="img/firefox-icon.png" alt="The firefox logo">
       <p><strong>Note:</strong>Empty elements are also sometimes called void elements.</p>
-      <h2 id="attribute">Attributes</h2>
+      <h2 id="attributes">Attributes</h2>
       <p>Elements can also have attributes, which look like this:</p>
       <img src="img/attribute.png" alt="A picture detailing the anatomy of an attribute">
       <p>Attributes contain extra information about the element which you don't want to appear in the actual content. In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
