@@ -3,7 +3,7 @@ body {
   line-height: 1.5;
   font-family: "Open Sans", arial, sans-serif;
   margin: 0;
-  word-wrap: break-word;
+  padding: 0;
 }
 #nav-bar ul {
   list-style: none;
@@ -12,11 +12,11 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 pre {
   background: #B3D4FC;
-  padding: 1.3rem 0 1.3rem 0.5rem;
+  padding: 1.3rem 1rem 1.3rem 0.5rem;
   border-left: 5px solid blue;
+  white-space:pre-wrap;    /* Internet Explorer 5.5+ */
 }
 code {
   background: #B3D4FC;
@@ -31,6 +31,7 @@ input {
 }
 div {
   display: flex;
+  width: 100%;
 }
 main {
   width: 100%;
@@ -57,10 +58,11 @@ h1 {
   width: 100%;
   margin: 0;
   padding-left: 0;
+  border
 }
 #nav-bar li {
   width: 100%;
-  padding: 1rem 0 0.5rem;
+  padding: 1rem 0;
   color: rgb(77, 78, 83);
   border-bottom: 1px solid;
 }
