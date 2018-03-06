@@ -18,6 +18,7 @@
         <li><a href="#attributes">Attributes</a></li>
         <li><a href="#anatomyOfHTMLDocument">Anatomy of a HTML Document</a></li>
         <li><a href="#entity">Entity references: Including special characters in HTML</a></li>
+        <li><a href="#comments">HTML comments</a></li>
       </ul>
     </nav>
   </header>
@@ -151,10 +152,22 @@
 
 &lt;p&gt;In HTML, you define a paragraph using the &lt;p&gt; element.&lt;/p&gt;</code></pre>
 In the live output below, you can see that the first paragraph has gone wrong, because the browser thinks that the second instance of <p> is starting a new paragraph. The second paragraph looks fine, because we have replaced the angle brackets with character references.</p>
-<em><p>In HTML, you define a paragraph using the <p> element.</p>
+<code><p>In HTML, you define a paragraph using the <p> element.</p>
 
-<p>In HTML, you define a paragraph using the &lt;p&gt; element.</p></em>
+<p>In HTML, you define a paragraph using the &lt;p&gt; element.</p></cpde>
 <p><strong>Note:</strong> A chart of all the available HTML character entity references can be found on Wikipedia: List of XML and HTML character entity references.</p>
+      <h2 id="comments">HTML comments</h2>
+      <p>In HTML, as with most programming languages, there is a mechanism available to write comments in the code — comments are ignored by the browser and invisible to the user, and their purpose is to allow you to include comments in the code to say how your code works, what the different parts of the code do, etc. This can be very useful if you return to a code base that you've not worked on for six months, and can't remember what you did — or if you hand your code over to someone else to work on.</p>
+
+      <p>To turn a section of content inside your HTML file into a comment, you need to wrap it in the special markers <code>&lt;!-- and --&gt;</code>, for example:</p>
+
+      <pre><code>&lt;p&gt;I'm not inside a comment&lt;/p&gt;
+
+&lt;!-- &lt;p&gt;I am!&lt;/p&gt; --&gt;</code></pre>
+<p>As you can see below, the first paragraph appears in the live output, but the second one doesn't.</p>
+<code><p>I'm not inside a comment</p>
+
+<!-- <p>I am!</p> --></code>
   </section>
   </main>
 
