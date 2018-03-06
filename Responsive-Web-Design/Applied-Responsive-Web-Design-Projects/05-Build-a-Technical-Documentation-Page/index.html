@@ -16,7 +16,8 @@
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#anatomyOfElement">Anatomy of an HTML element</a></li>
         <li><a href="#attributes">Attributes</a></li>
-        <li><a href="#anatomyOfHTMLDocument">Attributes</a></li>
+        <li><a href="#anatomyOfHTMLDocument">Anatomy of a HTML Document</a></li>
+        <li><a href="#entity">Entity references: Including special characters in HTML</a></li>
       </ul>
     </nav>
   </header>
@@ -106,19 +107,19 @@
 
       <pre><code>&lt;a href="http://www.example.com" title="Isn't this fun?"&gt;A link to my example.&lt;/a&gt;</code></pre>
       <p>However if you want to include a quote within the quotes where both the quotes are of the same type(single quote or double quote), you'll have to use HTML entities for the quotes.</p>
-      <h2>Anatomy of a HTML document</h2>
+      <h2 id="anatomyOfHTMLDocument">Anatomy of a HTML document</h2>
       <p>That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page:</p>
 
       <pre><code>&lt;!DOCTYPE html&gt;
-      &lt;html&gt;
-        &lt;head&gt;
-          &lt;meta charset="utf-8"&gt;
-          &lt;title&gt;My test page&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-          &lt;p&gt;This is my page&lt;/p&gt;
-        &lt;/body&gt;
-      &lt;/html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;title&gt;My test page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;This is my page&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
     </code></pre>
       <p>Here we have:</p>
       <ol>
@@ -132,7 +133,28 @@
         <li>&lt;title&gt;&lt;/title&gt;: The &lt;title&gt; element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in, and is used to describe the page when you bookmark/favorite it.</li>
         <li>&lt;body&gt;&lt;/body&gt;: The &lt;body&gt; element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.</li>
       </ol>
-      
+      <h3>Whitespace in HTML</h3>
+      <p>In the above examples you may have noticed that a lot of whitespace is included in the code listings — this is not necessary at all; the two following code snippets are equivalent:
+
+      <pre><code>&lt;p>Dogs are silly.&lt;/p&gt;
+
+&lt;p&gt;Dogs        are
+               silly.&lt;/p&gt;</code></pre>
+      No matter how much whitespace you use (which can include space characters, but also line breaks), the HTML parser reduces each one down to a single space when rendering the code. So why use so much whitespace? The answer is readability — it is so much easier to understand what is going on in your code if you have it nicely formatted, and not just bunched up together in a big mess. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you what style of formatting you use (how many spaces for each level of indentation, for example), but you should consider formatting it.</p>
+      <h2 id="entity">Entity references: Including special characters in HTML</h2>
+      <p>In HTML, the characters &lt;, &gt;,",' and &amp; are special characters. They are parts of the HTML syntax itself, so how do you include one of these characters in your text, for example if you really want to use an ampersand or less than sign, and not have it interpreted as code as some browsers may do?</p>
+
+      <p>We have to use character references — special codes that represent characters, and can be used in these exact circumstances. Each character reference is started with an ampersand (&amp;), and ended by a semicolon (;).</p>
+      <p>In the below example, you can see two paragraphs, which are talking about web technologies:
+
+      <pre><code>&lt;p&gt;In HTML, you define a paragraph using the &lt;p&gt; element.&lt;/p&gt;
+
+&lt;p&gt;In HTML, you define a paragraph using the &lt;p&gt; element.&lt;/p&gt;</code></pre>
+In the live output below, you can see that the first paragraph has gone wrong, because the browser thinks that the second instance of <p> is starting a new paragraph. The second paragraph looks fine, because we have replaced the angle brackets with character references.</p>
+<em><p>In HTML, you define a paragraph using the <p> element.</p>
+
+<p>In HTML, you define a paragraph using the &lt;p&gt; element.</p></em>
+<p><strong>Note:</strong> A chart of all the available HTML character entity references can be found on Wikipedia: List of XML and HTML character entity references.</p>
   </section>
   </main>
 
