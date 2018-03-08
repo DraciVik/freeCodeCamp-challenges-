@@ -9,32 +9,32 @@
 </head>
 <body>
   <div>
-  <header>
+  <header class="header-nav">
     <h1> HTML5 Documentation</h1>
-    <nav id="nav-bar">
+    <nav id="navbar">
       <ul>
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#anatomyOfElement">Anatomy of an HTML element</a></li>
-        <li><a href="#attributes">Attributes</a></li>
-        <li><a href="#anatomyOfHTMLDocument">Anatomy of a HTML Document</a></li>
-        <li><a href="#entity">Entity references: Including special characters in HTML</a></li>
-        <li><a href="#comments">HTML comments</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#reference">Reference</a></li>
+        <li><a href="#Introduction">Introduction</a></li>
+        <li><a href="#Anatomy_of_an_HTML_element">Anatomy of an HTML element</a></li>
+        <li><a href="#Attributes">Attributes</a></li>
+        <li><a href="#Anatomy_of_a_HTML_Document">Anatomy of a HTML document</a></li>
+        <li><a href="#Entity_references_Including_special_characters_in_HTML">Entity references Including special characters in HTML</a></li>
+        <li><a href="#HTML_comments">HTML comments</a></li>
+        <li><a href="#Summary">Summary</a></li>
+        <li><a href="#Reference">Reference</a></li>
       </ul>
     </nav>
   </header>
-  <main id="main">
-  <section>
-    <h2 id="introduction">Introduction</h2>
+  <main id="main-doc">
+  <section id="Introduction" class="main-section">
+    <header><h2>Introduction</h2></header>
       <p>HTML (Hypertext Markup Language) is not a programming language; it is a markup language used to tell your browser how to structure the web pages you visit. It can be as complicated or as simple as the web developer wishes it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of the content to make it appear or act a certain way. The enclosing tags can make a bit of content into a hyperlink to link to another page on the web, italicize words, and so on.  For example, take the following line of content:</p>
       <pre><code>My cat is very grumpy</code></pre>
       <p>If we wanted the line to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph <code>&lt;p&gt;</code> element:</p>
       <pre><code>&lt;p&gt;My cat is very grumpy&lt;p&gt;</code></pre>
       <p class="note"><strong>Note</strong>: Elements in HTML are case-insensitive, i.e. they can be written in uppercase or lowercase. For example, a <code>&lt;title&gt;</code> element could be written as <code>&lt;title&gt;</code>, <code>&lt;TITLE&gt;</code>, <code>&lt;Title&gt;</code>, <code>&lt;TiTlE&gt;</code>, etc., and it will work fine. Best practice, however, is to write all elements lowercase for consistency, readability, and other reasons.</p>
   </section>
-  <section>
-    <h2 id="anatomyOfElement">Anatomy of an HTML element</h2>
+  <section id="Anatomy_of_an_HTML_element" class="main-section">
+    <header><h2>Anatomy of an HTML element</h2></header>
       <p>Let's explore our paragraph element a bit further:</p>
       <img src="img/anatomy.png" alt="A picture detailing the anatomy of a paragraph">
       <p>The main parts of our element are:</p>
@@ -76,8 +76,8 @@
         <p><strong>Note:</strong>Empty elements are also sometimes called void elements.</p>
     </article>
   </section>
-  <section>
-    <h2 id="attributes">Attributes</h2>
+  <section id="Attributes" class="main-section">
+    <header><h2>Attributes</h2></header>
       <p>Elements can also have attributes, which look like this:</p>
       <img src="img/attribute.png" alt="A picture detailing the anatomy of an attribute">
       <p>Attributes contain extra information about the element which you don't want to appear in the actual content. In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
@@ -127,8 +127,8 @@
         <p>However if you want to include a quote within the quotes where both the quotes are of the same type(single quote or double quote), you'll have to use HTML entities for the quotes.</p>
     </article>
   </section>
-  <section>
-    <h2 id="anatomyOfHTMLDocument">Anatomy of a HTML document</h2>
+  <section id="Anatomy_of_a_HTML_document" class="main-section">
+    <header><h2>Anatomy of a HTML document</h2></header>
       <p>That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page:</p>
 
       <pre><code>&lt;!DOCTYPE html&gt;
@@ -165,8 +165,8 @@
         No matter how much whitespace you use (which can include space characters, but also line breaks), the HTML parser reduces each one down to a single space when rendering the code. So why use so much whitespace? The answer is readability — it is so much easier to understand what is going on in your code if you have it nicely formatted, and not just bunched up together in a big mess. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you what style of formatting you use (how many spaces for each level of indentation, for example), but you should consider formatting it.</p>
     </article>
   </section>
-  <section>
-    <h2 id="entity">Entity references: Including special characters in HTML</h2>
+  <section id="Entity_references_Including_special_characters_in_HTML" class="main-section">
+    <header><h2>Entity references Including special characters in HTML</h2></header>
       <p>In HTML, the characters &lt;, &gt;,",' and &amp; are special characters. They are parts of the HTML syntax itself, so how do you include one of these characters in your text, for example if you really want to use an ampersand or less than sign, and not have it interpreted as code as some browsers may do?</p>
 
       <p>We have to use character references — special codes that represent characters, and can be used in these exact circumstances. Each character reference is started with an ampersand (&amp;), and ended by a semicolon (;).</p>
@@ -181,8 +181,8 @@ In the live output below, you can see that the first paragraph has gone wrong, b
       <p>In HTML, you define a paragraph using the &lt;p&gt; element.</p></code>
       <p class="note"><strong>Note:</strong> A chart of all the available HTML character entity references can be found on Wikipedia: List of XML and HTML character entity references.</p>
   </section>
-  <section>
-    <h2 id="comments">HTML comments</h2>
+  <section id="HTML_comments" class="main-section">
+    <header><h2>HTML comments</h2></header>
       <p>In HTML, as with most programming languages, there is a mechanism available to write comments in the code — comments are ignored by the browser and invisible to the user, and their purpose is to allow you to include comments in the code to say how your code works, what the different parts of the code do, etc. This can be very useful if you return to a code base that you've not worked on for six months, and can't remember what you did — or if you hand your code over to someone else to work on.</p>
 
       <p>To turn a section of content inside your HTML file into a comment, you need to wrap it in the special markers <code>&lt;!-- and --&gt;</code>, for example:</p>
@@ -195,13 +195,13 @@ In the live output below, you can see that the first paragraph has gone wrong, b
 
 <!-- <p>I am!</p> --></code>
   </section>
-  <section>
-    <h2 id="summary">Summary</h2>
+  <section id="Summary" class="main-section">
+    <header><h2>Summary</h2></header>
       <p>You've reached the end of the article — we hope you enjoyed your tour of the very basics of HTML! At this point you should understand what the language looks like, how it works at a basic level, and be able to write a few elements and attributes. This is a perfect place to be right now, as in subsequent articles in the module we will go into some of the things you have already looked at in a lot more detail, and introduce some new features of the language. Stay tuned!</p>
       <p class="note"><strong>Note:</strong> At this point, as you start to learn more about HTML, you might also want to start to explore the basics of Cascading Style Sheets, or CSS. CSS is the language you use to style your web pages (whether e.g. changing the font or colors, or altering the page layout). HTML and CSS go very well together, as you'll soon discover.</p>
   </section>
-  <section>
-    <h2 id="reference">Reference</h2>
+  <section id="Reference" class="main-section">
+    <header><h2>Reference</h2></header>
       <p>All the documentation in this page is taken from <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started">MDN</a></p>
   </section>
   </main>

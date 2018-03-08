@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding-left: 0;
 }
-#nav-bar ul {
+#navbar ul {
   list-style: none;
 }
 img {
@@ -40,12 +40,12 @@ div {
   padding: 0;
   margin: 0;
 }
-main {
+#main-doc {
   width: 100%;
   display: flex;
   flex-flow: column wrap;
 }
-header {
+.header-nav {
   box-sizing: border-box;
   margin: 0 1rem;
   margin-left: 0;
@@ -59,7 +59,7 @@ header {
 h1 {
   padding: 0 0.5rem 0 0;
 }
-#nav-bar ul {
+#navbar ul {
   box-sizing: border-box;
   display: flex;
   flex-flow: column wrap;
@@ -68,7 +68,7 @@ h1 {
   margin: 0;
   padding-left: 0;
 }
-#nav-bar li {
+#navbar li {
   box-sizing: border-box;
   width: 100%;
   padding: 1rem 0 1rem 10px;
@@ -83,11 +83,11 @@ li a {
   div {
     flex-flow: row wrap;
   }
-  header {
+  .header-nav {
     width: 100%;
     margin-right: 0;
   }
-  main {
+  #main-doc {
     padding-left: 10px;
   }
 }
