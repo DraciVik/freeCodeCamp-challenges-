@@ -37,6 +37,8 @@ input {
 div {
   display: flex;
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 main {
   width: 100%;
@@ -46,6 +48,7 @@ main {
 header {
   box-sizing: border-box;
   margin: 0 1rem;
+  margin-left: 0;
   display: flex;
   flex-flow: column wrap;
   width: 300px;
@@ -63,11 +66,12 @@ h1 {
   width: 100%;
   margin: 0;
   padding-left: 0;
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
 }
 #nav-bar li {
+  box-sizing: border-box;
   width: 100%;
-  padding: 1rem 0;
+  padding: 1rem 0 1rem 10px;
   color: rgb(77, 78, 83);
   border-bottom: 1px solid;
 }
