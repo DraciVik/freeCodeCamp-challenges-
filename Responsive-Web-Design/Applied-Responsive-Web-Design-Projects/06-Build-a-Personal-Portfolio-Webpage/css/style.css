@@ -1,0 +1,12 @@
+.header{background:LightSkyBlue;}
+.welcome{background:LightSalmon;}
+.projects{background:PaleTurquoise;}
+.linksToSocial{background:LightPink;}
+.footer{background:PaleGreen;}
+.container {
+  width: 100%;
+  font-size: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
