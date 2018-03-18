@@ -58,3 +58,7 @@ a:active  {
   background-color: PaleGreen;
   color: white;
   }
+
+figure {
+  max-width: 20%;
+}
