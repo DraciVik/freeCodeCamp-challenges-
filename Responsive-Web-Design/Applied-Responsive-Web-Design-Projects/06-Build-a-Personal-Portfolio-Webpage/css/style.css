@@ -1,12 +1,43 @@
-.header{background:LightSkyBlue;}
-.welcome{background:LightSalmon;}
-.projects{background:PaleTurquoise;}
-.linksToSocial{background:LightPink;}
-.footer{background:PaleGreen;}
+#header{background:LightSkyBlue;}
+#welcome-section{background:LightSalmon;
+line-height: 100vh;}
+#projects{background:PaleTurquoise;}
+#linksToSocial{background:LightPink;}
+#footer{background:PaleGreen;}
+body {
+  margin: 0;
+  padding: 0;
+}
 .container {
   width: 100%;
-  font-size: 40px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+}
+header {
+  font-size: 20px;
+  height: 100vh;
+}
+header h1{
+  text-align: center;
+  top: 0;
+  padding-top: 45vh;
+  line-height: 0.5em;
+}
+header p {
+  text-align: center;
+}
+#navbar {
+  width: 100%;
+  position: fixed;
+  background-color: lightSkyBlue;
+}
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+#navbar ul li {
+  margin: 10px 30px;
+  text-decoration: none;
 }
