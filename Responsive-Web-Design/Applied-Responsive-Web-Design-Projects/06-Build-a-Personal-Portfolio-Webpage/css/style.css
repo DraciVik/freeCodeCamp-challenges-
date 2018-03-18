@@ -1,12 +1,11 @@
-#header{background:LightSkyBlue;}
-#welcome-section{background:LightSalmon;
-line-height: 100vh;}
+#welcome-section{background:LightSkyBlue;}
 #projects{background:PaleTurquoise;}
 #linksToSocial{background:LightPink;}
 #footer{background:PaleGreen;}
 body {
   margin: 0;
   padding: 0;
+  font-family: "Open Sans", arial, sans-serif;
 }
 .container {
   width: 100%;
@@ -14,17 +13,17 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
-header {
+#welcome-section {
   font-size: 20px;
   height: 100vh;
 }
-header h1{
+.header h1{
   text-align: center;
   top: 0;
   padding-top: 45vh;
   line-height: 0.5em;
 }
-header p {
+.header p {
   text-align: center;
 }
 #navbar {
@@ -41,3 +40,21 @@ header p {
   margin: 10px 30px;
   text-decoration: none;
 }
+/* Link styles */
+a {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px black;
+  font-weight: bold;
+}
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  underline;
+  font-weight:      bold;
+  color:            #fff;
+  }
+a:active  {
+  /* Applies to activated links */
+  background-color: PaleGreen;
+  color: white;
+  }
