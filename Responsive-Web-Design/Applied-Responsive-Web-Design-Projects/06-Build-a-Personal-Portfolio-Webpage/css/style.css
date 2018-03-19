@@ -37,7 +37,7 @@ body {
   list-style: none;
 }
 #navbar ul li {
-  margin: 10px 30px;
+  margin: 0 30px;
   text-decoration: none;
 }
 /* Link styles */
@@ -58,7 +58,21 @@ a:active  {
   background-color: PaleGreen;
   color: white;
   }
-
+img {
+  width: 300px;
+}
+/* Projects styling */
+#projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+h2 {
+  text-align: center;
+  width: 100vw;
+}
 figure {
-  max-width: 20%;
+  display: inline-block;
+  box-sizing:border-box;
+  text-align: center;
 }
