@@ -1,6 +1,7 @@
 #welcome-section{background:LightSkyBlue;}
 #projects{background:PaleTurquoise;}
-#linksToSocial{background:LightPink;}
+#linksToSocial{background:LightPink;
+height: 100px;}
 #footer{background:PaleGreen;}
 body, html {
   margin: 0;
@@ -33,6 +34,7 @@ body, html {
   background-color: lightSkyBlue;
 }
 #navbar ul {
+  margin: 0 0;
   padding: 0;
   display: flex;
   justify-content: flex-end;
@@ -40,6 +42,7 @@ body, html {
 }
 #navbar ul li {
   margin: 0 30px;
+  padding: 8px;
   text-decoration: none;
 }
 /* Link styles */
@@ -77,4 +80,7 @@ figure {
 }
 figcaption {
   color: gray;
+}
+i {
+  font-size: 24px;
 }
