@@ -76,26 +76,28 @@ figure {
   display: inline-block;
   box-sizing:border-box;
   text-align: center;
+  flex: 1 1 auto;
 }
 figcaption {
   color: gray;
 }
+/* SOCIAL LINKS STYLING*/
 #linksToSocial {
   height: 50vh;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-
 }
 a span {
   font-size: 24px;
   color: black;
+  flex: 1 1 auto;
 }
 .github:hover {
   color: purple;
 }
 .linkedin:hover {
-  color: #4875B4;
+  color: #0077B5;
 }
 .facebook:hover {
   color: #3B5998;
@@ -105,4 +107,16 @@ a span {
 }
 .email:hover {
   color: #C63D2D;
+}
+/* FOOTER */
+#footer {
+  text-align: center;
+  line-height: 10vh;
+}
+#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+#footer a:hover {
+  color: #0077B5;
 }
