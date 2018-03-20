@@ -1,7 +1,6 @@
 #welcome-section{background:LightSkyBlue;}
 #projects{background:PaleTurquoise;}
-#linksToSocial{background:LightPink;
-height: 100px;}
+#linksToSocial{background:LightPink;}
 #footer{background:PaleGreen;}
 body, html {
   margin: 0;
@@ -46,19 +45,19 @@ body, html {
   text-decoration: none;
 }
 /* Link styles */
-a {
+ul a {
   color: white;
   text-decoration: none;
   text-shadow: 2px 2px black;
   font-weight: bold;
 }
-a:hover   {
+ul a:hover   {
   /* Applies to links under the pointer */
   text-decoration:  underline;
   font-weight:      bold;
   color:            #fff;
   }
-a:active  {
+ul a:active  {
   /* Applies to activated links */
   background-color: PaleGreen;
   color: white;
@@ -81,6 +80,10 @@ figure {
 figcaption {
   color: gray;
 }
-i {
+#linksToSocial {
+  height: 50vh;
+  
+}
+a span {
   font-size: 24px;
 }
