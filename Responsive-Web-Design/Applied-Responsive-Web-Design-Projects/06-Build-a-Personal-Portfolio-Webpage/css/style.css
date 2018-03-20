@@ -91,3 +91,18 @@ a span {
   font-size: 24px;
   color: black;
 }
+.github:hover {
+  color: purple;
+}
+.linkedin:hover {
+  color: #4875B4;
+}
+.facebook:hover {
+  color: #3B5998;
+}
+.twitter:hover {
+  color: #33CCFF;
+}
+.email:hover {
+  color: #C63D2D;
+}
