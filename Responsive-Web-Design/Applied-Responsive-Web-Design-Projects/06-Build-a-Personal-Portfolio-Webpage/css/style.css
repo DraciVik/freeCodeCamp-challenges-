@@ -21,8 +21,9 @@ body, html {
 .header h1{
   text-align: center;
   top: 0;
+  margin: 0 auto;
   padding-top: 45vh;
-  line-height: 0.5em;
+  line-height: 1em;
 }
 .header p {
   text-align: center;
@@ -81,8 +82,8 @@ figure {
 figcaption {
   color: gray;
 }
-.button {
-  box-sizing: border-box;
+button[type="submit"] {
+	box-sizing: border-box;
 	border-radius: 0px 2px 2px 0px;
 	background: #8B798C;
 	font-weight: 300;
@@ -94,10 +95,18 @@ figcaption {
 	text-decoration: none;
 	cursor: pointer;
   margin-bottom: 10px;
+}
+button[type="submit"]:hover {
+	background: #C17CCF;
+}
+.button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 0 0 200px;
+  background:PaleTurquoise;
+}
+.submitBtn {
+  flex: 0 1 200px;
 }
 /* SOCIAL LINKS STYLING*/
 #linksToSocial {
@@ -105,6 +114,7 @@ figcaption {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  width:100%;
 }
 a span {
   font-size: 24px;
@@ -142,8 +152,8 @@ a span {
 }
 
 @media (max-width: 750px) {
-  #linksToSocial a {
-
+  #linksToSocial {
+    height: 70vh;
 
   }
 }
