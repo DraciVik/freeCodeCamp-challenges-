@@ -152,8 +152,10 @@ a span {
 }
 
 @media (max-width: 750px) {
-  #linksToSocial {
-    height: 70vh;
-
+  nav {
+    font-size: 16px;
+  }
+  #navbar ul li {
+    margin: 0 auto;
   }
 }
