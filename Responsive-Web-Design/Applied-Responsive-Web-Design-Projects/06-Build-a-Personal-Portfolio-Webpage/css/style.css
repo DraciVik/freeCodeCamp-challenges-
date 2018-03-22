@@ -93,8 +93,10 @@ a span {
   color: black;
   flex: 1 1 auto;
 }
+
 .github:hover {
   color: purple;
+  flex: 1 1 20%;
 }
 .linkedin:hover {
   color: #0077B5;
@@ -119,4 +121,11 @@ a span {
 }
 #footer a:hover {
   color: #0077B5;
+}
+
+@media (max-width: 750px) {
+  #linksToSocial a {
+
+
+  }
 }
