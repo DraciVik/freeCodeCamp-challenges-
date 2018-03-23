@@ -7,6 +7,7 @@ body, html {
   padding: 0;
   font-family: "Open Sans", arial, sans-serif;
   width: 100vw;
+  overflow-wrap: break-word;
 }
 .container {
   width: 100%;
