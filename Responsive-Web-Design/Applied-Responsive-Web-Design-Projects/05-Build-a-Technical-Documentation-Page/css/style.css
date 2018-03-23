@@ -51,13 +51,17 @@ input {
   height: 100%;
   line-height: 1.5;
   border-right: 3px solid gray;
-  background: rgba(0, 0, 0, 0.1);
+  background: #D3D3D3;
   position: fixed;
   min-width: 300px;
 }
 h1 {
   padding: 0 0.5rem 0 0;
   width:
+}
+#navbar {
+  position: fixed;
+  min-width: 300px;
 }
 #navbar ul {
   list-style: none;
@@ -82,7 +86,21 @@ li a {
   text-decoration: none;
 }
 @media (max-width: 800px) {
+  div {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  #main-doc {
+    padding-left: 10px;
+    margin-top: 0;
+  }
+  .header-nav, #navbar {
+    width: 100%;
+    position: relative;
+    height: 532px;
+    border-right: none;
+  }
   #navbar li {
-    width: 300px;
+    width: 100%;
   }
 }
