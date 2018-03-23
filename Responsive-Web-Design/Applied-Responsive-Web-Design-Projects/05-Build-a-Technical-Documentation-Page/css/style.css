@@ -82,26 +82,7 @@ li a {
   text-decoration: none;
 }
 @media (max-width: 800px) {
-  /* div {
-    flex-flow: row wrap;
-  }
-  .header-nav {
-    width: 100%;
-    margin-right: 0;
-    border-right: none;
-    height: 500px;
-} */
   #navbar li {
     width: 300px;
   }
-  /* #navbar {
-    position: fixed;
-  }
-  #main-doc {
-    padding-left: 10px;
-    width: 100%;
-    margin-left: 10px;
-    margin-top: 500px;
-    border-left: 0;
-  } */ */
 }
