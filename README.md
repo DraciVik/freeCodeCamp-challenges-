@@ -1,7 +1,7 @@
 # freeCodeCamp-challenges
 These are my solutions to the freeCodeCamp challenges
 
-1.[Responsive Web Design](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design)
+1. [Responsive Web Design](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design)
   * [Basic HTML and HTML5](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-HTML-and-HTML5)
     1. [Learn how freeCodeCamp works](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-HTML-and-HTML5/01-Learn-How-freeCodeCamp-Works)
     2. [Introduction to the basic HTML and HTML5 challenges](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-HTML-and-HTML5/02-Introduction-to-the-Basic-HTML-and-HTML5-Challenges)
@@ -205,3 +205,15 @@ These are my solutions to the freeCodeCamp challenges
     3. [Build a product landing page](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Applied-Responsive-Web-Design-Projects/04-Build-a-Product-Landing-Page)
     4. [Build a technical documentation page](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Applied-Responsive-Web-Design-Projects/05-Build-a-Technical-Documentation-Page)
     5. [Build a personal portfolio webpage](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Applied-Responsive-Web-Design-Projects/06-Build-a-Personal-Portfolio-Webpage)
+2. [JavaScript Algorithms and data structures](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures)
+  * [Basic JavaScript](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript)
+    1. [Introduction to Java Script](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/01-Introduction-to-JavaScript)
+    2. [Comment your javaScript code](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/02-Comment-Your-JavaScript-Code)
+    3. [Declare javaScript variables](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/03-Declare-JavaScript-Variables)
+    4. [Storing values with the assignment operator](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/04-Storing-Values-with-the-Assignment-Operator)
+    5. [Initializing variables with the assignment operator](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/05-Initializing-Variables-with-the-Assignment-Operator)
+    6. [Understanding uninitialized variables](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/06-Understanding-Uninitialized-Variables)
+    7. [Understanding case sensitivity in variables](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/07-Understanding-Case-Sensitivity-in-Variables)
+    8. [Add two numbers with javaScript](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/08-Add-Two-numbers-with-JavaScript)
+    9. [Substract one number from another with javascript](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/09-Subtract-One-Number-from-Another-with-JavaScript)
+    10. [Mulitply two numbers with javaScript](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-JavaScript/10-Multiply-Two-Numbers-with-JavaScript)
