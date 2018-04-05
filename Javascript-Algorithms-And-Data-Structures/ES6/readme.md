@@ -8,3 +8,8 @@
 8. [Write arrow functions with paramathers](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/08-Write-Arrow-Funcitons-with-Parameters)
 9. [Write higher order arrow functions](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/09-Write-Higher-Order-Arrow-Functions)
 10. [Set default parameters for your functions](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/10-Set-Default-Parameters-for-Your-Functions)
+11. [Use the rest operator with function parameters]()https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/11-Use-the-Rest-Operator-with-Function-Parameters
+12. [Use the spread operator to evaluate arrays in place](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/12-Use-the-Spread-Operator-To-Evaluate-Arrays-in-Place)
+13. [Use destructuring assignment to assign variables from objects](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/13-Use-Destructuring-Assignment-to-Assign-Variables-from-Objects)
+14. [Use destructuring assignment to assign variables from nested objects](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/14-Use-Destructuring-Assignment-to-Assign-Variables-from-Nested-Objects)
+15. [Use destructuring assignment to assign variables from arrays](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/ES6/15-Use-Destructuring-Assignment-to-Assign-Variables-from-Arrays)
