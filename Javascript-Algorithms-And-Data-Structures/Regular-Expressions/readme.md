@@ -1,0 +1,5 @@
+1. [Introduction to the regular expressions challenges](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/01-Introduction-to-the-Regular-Expression-Challenges)
+2. [Using the test methot](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/02-Using-the-Test-Method)
+3. [Match literal strings](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/03-Match-Literal-Strings)
+4. [Match a literal string with different possibilities](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/04-Match-a-Literal-String-with-Different-Possibilities)
+5. [Ignore case while matching](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/05-Ignore-Case-While-Matching)
