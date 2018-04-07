@@ -3,3 +3,8 @@
 3. [Match literal strings](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/03-Match-Literal-Strings)
 4. [Match a literal string with different possibilities](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/04-Match-a-Literal-String-with-Different-Possibilities)
 5. [Ignore case while matching](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/05-Ignore-Case-While-Matching)
+6. [Extract matches](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/06-Extract-Matches)
+7. [Find more than the first match](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/07-Find-More-Than-the-First-Match)
+8. [Match anything with wildcard period](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/08-Match-Anything-with-Wildcard-Period)
+9. [Match single character with multiple possibilities](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/09-Match-Single-Character-with-Multiple-Possibilities)
+10. [Match letters of the alphabet](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/10-Match-Letters-of-the-Alphabet)
