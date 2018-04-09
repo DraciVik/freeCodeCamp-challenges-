@@ -23,4 +23,8 @@
 23. [Restrict possible usernames](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/23-Restrict-Possible-Usernames)
 24. [Match whitespace](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/24-Match-Whitespace)
 25. [Match non whitespace characters](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/25-Match-Non-Whitespace-Characters)
-
+26. [Specify upper and lower number of matches](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/26-Specify-Upper-and-Lower-Number-of-Matches)
+27. [Specify only the lower number of matches](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/27-Specify-Only-the-Lower-Number-of-Matches)
+28. [Specify exact number of matches](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/28-Specify-Exact-Number-of-Matches)
+29. [Check for all or none](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/29-Check-for-All-or-None)
+30. [Positive and negative lookahead](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/30-Positive-and-Negative-Lookahead)
