@@ -18,3 +18,9 @@
 18. [Match ending string patterns](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/18-Match-Ending-String-Patterns)
 19. [Match all letters and numbers](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/19-Match-All-Letters-And-Numbers)
 20. [Match everything but letters and numbers](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/20-Match-Everything-But-Letters-and-Numbers)
+21. [Match all numbers](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/21-Match-All-Numbers)
+22. [Match all non numbers](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/22-Match-All-Non-Numbers)
+23. [Restrict possible usernames](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/23-Restrict-Possible-Usernames)
+24. [Match whitespace](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/24-Match-Whitespace)
+25. [Match non whitespace characters](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/25-Match-Non-Whitespace-Characters)
+
