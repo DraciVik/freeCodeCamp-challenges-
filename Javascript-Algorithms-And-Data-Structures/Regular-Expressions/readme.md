@@ -28,3 +28,6 @@
 28. [Specify exact number of matches](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/28-Specify-Exact-Number-of-Matches)
 29. [Check for all or none](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/29-Check-for-All-or-None)
 30. [Positive and negative lookahead](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-structures/Regular-Expressions/30-Positive-and-Negative-Lookahead)
+31. [Reuse patterns using capture groups](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/31-Reuse-Patterns-Using-Capture-Groups)
+32. [Use capture groups to search and replace](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/32-Use-Capture-Groups-to-Search-and-Replace)
+33. [Remove whitespace from start and end](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Regular-Expressions/33-Remove-Whitespace-from-Start-and-End)
