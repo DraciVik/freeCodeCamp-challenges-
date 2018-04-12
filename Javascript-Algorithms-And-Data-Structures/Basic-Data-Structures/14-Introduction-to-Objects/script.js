@@ -1,0 +1,1 @@
+It is a lengthy text that explains as up to the point what javaScript objects are and why they are great. One thing it mentions at the end that we should remember is that performant access to flexibly structured data make key-value stores very attractive data structures useful in a wide variety of settings.
