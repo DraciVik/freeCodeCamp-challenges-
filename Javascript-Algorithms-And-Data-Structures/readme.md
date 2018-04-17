@@ -4,3 +4,4 @@
 4. [Debugging](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Debugging)
 5. [Basic data structures](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-Data-Structures)
 6. [Basic algorithm scripting](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-Algorithm-Scripting)
+7. [Object oriented programming](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Object-Oriented-Programming)
