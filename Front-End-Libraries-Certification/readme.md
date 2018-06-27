@@ -2,3 +2,6 @@
 * [jQuery](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Front-End-Libraries-Certification/jQuery)
 * [SASS](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Front-End-Libraries-Certification/SASS)
 * [React](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Front-End-Libraries-Certification/React)
+* [Redux](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Front-End-Libraries-Certification/Redux)
+* [React and Redux](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Front-End-Libraries-Certification/React-and-Redux)
+* [Front End Libraries Projects](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Front-End-Libraries-Certification/Front-End-Libraries-Projects)
