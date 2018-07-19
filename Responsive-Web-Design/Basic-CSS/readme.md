@@ -1,4 +1,3 @@
-
   1. [Introduction to basic CSS](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/01-Introduction-to-Basic-CSS)
   2. [Change the color of a text](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/02-Change-the-Color-of-Text)
   3. [Use CSS selectors to style elements](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/03-Use-CSS-Selectors-to-Style-Elements)
@@ -36,3 +35,10 @@
   35. [Use abbreviated hex code](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/35-Use-Abbreviated-Hex-Code)
   36. [Use RGB values to color elements](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/36-Use-RGB-Values-to-Color-Elements)
   37. [Use RGB to mix colors](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/37-Use-RGB-to-Mix-Colors)
+  38. [Use CSS Variables to Change several elements at once](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/38-Use-CSS-Variables-to-Change-several-elements-at-once)
+  39. [Create a custom CSS Variable](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/39-Create-a-custom-CSS-Variable)
+  40. [Use a custom CSS Variable](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/40-Use-a-custom-CSS-Variable)
+  41. [Attach a Fallback value to a CSS Variable](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/41-Attach-a-Fallback-value-to-a-CSS-Variable)
+  42. [Cascading CSS variables](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/42-Cascading-CSS-variables)
+  43. [Change a variable for a specific area](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/43-Change-a-variable-for-a-specific-area)
+  44. [Use a media query to change a variable](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Responsive-Web-Design/Basic-CSS/44-Use-a-media-query-to-change-a-variable)
