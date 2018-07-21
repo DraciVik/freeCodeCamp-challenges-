@@ -5,3 +5,5 @@
 5. [Basic data structures](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-Data-Structures)
 6. [Basic algorithm scripting](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Basic-Algorithm-Scripting)
 7. [Object oriented programming](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Object-Oriented-Programming)
+8. [Functional Programming](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Functional-Programming)
+9. [Intermediate Algorithm Scripting](https://github.com/DraciVik/freeCodeCamp-challenges/tree/master/Javascript-Algorithms-And-Data-Structures/Intermediate-Algorithm-Scripting)
