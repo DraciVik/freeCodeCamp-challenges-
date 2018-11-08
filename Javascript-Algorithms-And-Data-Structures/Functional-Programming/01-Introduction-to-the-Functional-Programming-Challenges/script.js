@@ -11,4 +11,4 @@ Functions have minimal side effects in the program
 
 
 The functional programming software development approach breaks a program into small, testable parts. This section covers basic functional programming principles in JavaScript.
-*.
+*/
