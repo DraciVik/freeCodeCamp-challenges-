@@ -22,8 +22,8 @@ Look at the ourName example if you get stuck.
 */
 
 // Example
-var ourName;
+let ourName;
 
 // Declare myName below this line
 
-var myName;
+let myName;

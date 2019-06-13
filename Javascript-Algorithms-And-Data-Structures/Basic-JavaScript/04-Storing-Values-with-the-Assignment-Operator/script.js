@@ -18,8 +18,8 @@ Assign the contents of a to variable b.
 */
 
 // Setup
-var a;
-var b = 2;
+let a;
+let b = 2;
 
 // Only change code below this line
 

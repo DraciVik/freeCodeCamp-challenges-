@@ -6,11 +6,11 @@ There are two ways to write comments in JavaScript:
 Using // will tell JavaScript to ignore the remainder of the text on the current line:
 
 // This is an in-line comment.
-You can make a multi-line comment beginning with /* and ending with */:
+You can make a multi-line comment beginning with /* and ending with */
 
 /* This is a
    multi-line comment */
-   /*
+/*
 Best Practice
 As you write code, you should regularly add comments to clarify the function of parts of your code. Good commenting can help communicate the intent of your code—both for others and for your future self.
 
