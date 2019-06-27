@@ -41,27 +41,29 @@ When you implement this, you would be tracking the temperature inside the class 
 
 This is the power of getter or setter - you are creating an API for another user, who would get the correct result, no matter which one you track.
 
-In other words, you are abstracting implementation details from the consumer.*/
-
+In other words, you are abstracting implementation details from the consumer. */
 
 function makeClass() {
-  "use strict";
-  /* Alter code below this line */
-  class Thermostat {
-    constructor(fahr) {
-      this.fahrenheit = fahr;
-    }
-    //getter
-    get temperatureInFahrenheit() {
-      return this.fahrenheit;
-    }
-    // setter
-    set temperatureInCelsius(fahr) {
-      this.fahrenheit = 5/9 * (fahr - 32);
-    }
-  }
-  /* Alter code above this line */
-  return Thermostat;
+  'use strict';
+
+        /* Alter code below this line */
+        class Thermostat {
+                constructor(fahr) {
+                        this.fahrenheit = fahr;
+                }
+
+                // getter
+                get temperatureInFahrenheit() {
+                        return this.fahrenheit;
+                }
+
+                // setter
+                set temperatureInCelsius(fahr) {
+                        this.fahrenheit = (5 / 9) * (fahr - 32);
+                }
+        }
+        /* Alter code above this line */
+        return Thermostat;
 }
 const Thermostat = makeClass();
 const thermos = new Thermostat(76); // setting in Farenheit scale

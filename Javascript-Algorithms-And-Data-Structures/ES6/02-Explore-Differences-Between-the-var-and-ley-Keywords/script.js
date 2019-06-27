@@ -31,10 +31,9 @@ Remember that since let prevents variables from being overridden, you will need 
 let catName;
 let quote;
 function catTalk() {
-  "use strict";
+        'use strict';
 
-  catName = "Oliver";
-  quote = catName + " says Meow!";
-
+        catName = 'Oliver';
+        quote = catName + ' says Meow!';
 }
 catTalk();

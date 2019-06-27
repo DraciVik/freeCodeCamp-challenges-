@@ -13,16 +13,15 @@ Change the code so that all variables are declared using let or const. Use let w
 */
 
 function printManyTimes(str) {
-  "use strict";
+        'use strict';
 
-  // change code below this line
+        // change code below this line
 
-  const SENTENCE = str + " is cool!";
-  for(let i = 0; i < str.length; i+=2) {
-    console.log(str);
-  }
+        const SENTENCE = str + ' is cool!';
+        for (let i = 0; i < str.length; i += 2) {
+                console.log(str);
+        }
 
-  // change code above this line
-
+        // change code above this line
 }
-printManyTimes("freeCodeCamp");
+printManyTimes('freeCodeCamp');

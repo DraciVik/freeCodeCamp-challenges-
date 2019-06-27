@@ -18,11 +18,12 @@ An array is declared as const s = [5, 7, 2]. Change the array to [2, 5, 7] using
 
 const s = [5, 7, 2];
 function editInPlace() {
-  "use strict";
-  // change code below this line
-    s.unshift(s.pop());
-  // s = [2, 5, 7]; <- this is invalid
+        'use strict';
 
-  // change code above this line
+        // change code below this line
+        s.unshift(s.pop());
+        // s = [2, 5, 7]; <- this is invalid
+
+        // change code above this line
 }
 editInPlace();
