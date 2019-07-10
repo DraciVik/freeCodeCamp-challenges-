@@ -11,14 +11,14 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function mutation(arr) {
-  let first = arr[0].toLowerCase();
-  let second = arr[1].toLowerCase();
-  for(let i = 0;i < second.length; i++) {
-    if(first.indexOf(second[i]) === -1) {
-      return false;
-    }
-  }
-  return true;
+        const first = arr[0].toLowerCase();
+        const second = arr[1].toLowerCase();
+        for (let i = 0; i < second.length; i += 1) {
+                if (first.indexOf(second[i]) === -1) {
+                        return false;
+                }
+        }
+        return true;
 }
 
-mutation(["hello", "hey"]);
+mutation(['hello', 'hey']);

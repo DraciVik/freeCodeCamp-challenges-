@@ -5,14 +5,14 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function chunkArrayInGroups(arr, size) {
-  // Break it up.
-  let newArr = [];
-  let i = 0;
-  while(arr.length) {
-    newArr[i] = arr.splice(0, size);
-    i++;
-  }
-  return newArr;
+        // Break it up.
+        const newArr = [];
+        let i = 0;
+        while (arr.length) {
+                newArr[i] = arr.splice(0, size);
+                i += 1;
+        }
+        return newArr;
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups(['a', 'b', 'c', 'd'], 2);

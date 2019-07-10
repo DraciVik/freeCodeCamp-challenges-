@@ -9,13 +9,18 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function getIndexToIns(arr, num) {
-  // Find my place in this sorted array.
-  arr = arr.sort((a, b) => a - b);
-  let i = 0;
-  while(num > arr[i]) {
-    i++;
-  }
-  return i;
+        // Find my place in this sorted array.
+        const newArr = Array.from(arr);
+        newArr.sort((a, b) => a - b);
+        if (newArr === []) {
+                return 0;
+        }
+        for (let i = 0; i < newArr.length; i += 1) {
+                if (newArr[i] >= num) {
+                        return i;
+                }
+        }
+        return newArr.length;
 }
 
 getIndexToIns([40, 60], 50);
