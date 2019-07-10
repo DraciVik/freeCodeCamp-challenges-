@@ -5,13 +5,15 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function repeatStringNumTimes(str, num) {
-  // repeat after me
-  let repeatedString = "";
-  while(num > 0) {
-    repeatedString += str;
-    num--;
-  }
-  return repeatedString;
+        // repeat after me
+        let newStr = '';
+        for (let i = 0; i < num; i += 1) {
+                newStr += str;
+        }
+        if (num <= 0) {
+                return '';
+        }
+        return newStr;
 }
 
-console.log(repeatStringNumTimes("abc", 3));
+repeatStringNumTimes('abc', 3);

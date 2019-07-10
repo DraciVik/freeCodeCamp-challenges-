@@ -7,12 +7,13 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function titleCase(str) {
-  str = str.toLowerCase();
-  str = str.split(" ");
-  for(let i = 0; i < str.length; i++) {
-   str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
-  }
-  return str.join(" ");
+        let strArr = str.toLowerCase();
+        strArr = strArr.split(' ');
+        const str2Arr = strArr.map(strng => strng.split(''));
+        for (let i = 0; i < str2Arr.length; i += 1) {
+                str2Arr[i][0] = str2Arr[i][0].toUpperCase();
+        }
+        return str2Arr.map(strng => strng.join('')).join(' ');
 }
 
-console.log(titleCase("I'm a little tea pot"));
+titleCase("I'm a little tea pot");

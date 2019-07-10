@@ -7,10 +7,10 @@ Remember to use Read-Search-Ask if you get stuck. Write your own code.
 */
 
 function confirmEnding(str, target) {
-  // "Never give up and good luck will find you."
-  // -- Falcor
-  testRegex = new RegExp(target + "$");
-  return testRegex.test(str);
+        // "Never give up and good luck will find you."
+        // -- Falcor
+        const testRegex = new RegExp(target + '$');
+        return testRegex.test(str);
 }
 
-confirmEnding("Bastian", "n");
+confirmEnding('Bastian', 'n');

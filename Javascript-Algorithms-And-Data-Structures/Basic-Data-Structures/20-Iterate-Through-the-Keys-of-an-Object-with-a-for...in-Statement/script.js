@@ -19,35 +19,35 @@ Objects do not maintain an ordering to stored keys like arrays do; thus a keys p
 We've defined a function, countOnline; use a for...in statement within this function to loop through the users in the users object and return the number of users whose online property is set to true.
 */
 
-let users = {
-  Alan: {
-    age: 27,
-    online: false
-  },
-  Jeff: {
-    age: 32,
-    online: true
-  },
-  Sarah: {
-    age: 48,
-    online: false
-  },
-  Ryan: {
-    age: 19,
-    online: true
-  }
+const users = {
+        Alan: {
+                age: 27,
+                online: false,
+        },
+        Jeff: {
+                age: 32,
+                online: true,
+        },
+        Sarah: {
+                age: 48,
+                online: false,
+        },
+        Ryan: {
+                age: 19,
+                online: true,
+        },
 };
 
 function countOnline(obj) {
-  // change code below this line
-  let i = 0;
-  for(let user in obj) {
-    if(obj[user].online === true) {
-      i++;
-    }
-  }
-  return i;
-  // change code above this line
+        // change code below this line
+        let i = 0;
+        for (const user in obj) {
+                if (obj[user].online === true) {
+                        i++;
+                }
+        }
+        return i;
+        // change code above this line
 }
 
 console.log(countOnline(users));

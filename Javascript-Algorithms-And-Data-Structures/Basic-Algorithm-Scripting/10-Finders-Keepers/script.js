@@ -5,14 +5,14 @@ Remember to use Read-Search-Ask if you get stuck. Try to pair program. Write you
 */
 
 function findElement(arr, func) {
-  for(let i = 0; i < arr.length; i++) {
-    let num = 0;
-    num = arr[i];
-    if(func(num) === true) {
-      return num;
-    }
-  }
-  return undefined;
+        for (let i = 0; i < arr.length; i++) {
+                let num = 0;
+                num = arr[i];
+                if (func(num) === true) {
+                        return num;
+                }
+        }
+        return undefined;
 }
 
 findElement([1, 2, 3, 4], num => num % 2 === 0);
