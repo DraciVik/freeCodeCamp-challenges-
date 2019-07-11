@@ -17,7 +17,7 @@ This duck object has two property/value pairs: a name of "Aflac" and a numLegs o
 Create a dog object with name and numLegs properties, and set them to a string and a number, respectively.
 */
 
-let dog = {
-    name : "Marco",
-    numLegs: 4
-  };
+const dog = {
+        name: 'Marco',
+        numLegs: 4,
+};
