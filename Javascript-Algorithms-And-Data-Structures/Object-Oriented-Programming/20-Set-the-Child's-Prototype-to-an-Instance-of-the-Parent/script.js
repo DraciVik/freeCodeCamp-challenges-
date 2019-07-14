@@ -14,19 +14,19 @@ duck inherits all of Animal's properties, including the eat method.
 Modify the code so that instances of Dog inherit from Animal.
 */
 
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
-  constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
-  }
+        constructor: Animal,
+        eat() {
+                console.log('nom nom nom');
+        },
 };
 
-function Dog() { }
+function Dog() {}
 
 // Add your code below this line
 Dog.prototype = Object.create(Animal.prototype);
 
-let beagle = new Dog();
-beagle.eat();  // Should print "nom nom nom"
+const beagle = new Dog();
+beagle.eat(); // Should print "nom nom nom"

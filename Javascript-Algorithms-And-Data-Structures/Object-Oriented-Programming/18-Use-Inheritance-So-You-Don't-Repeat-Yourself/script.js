@@ -40,26 +40,26 @@ The eat method is repeated in both Cat and Bear. Edit the code in the spirit of 
 */
 
 function Cat(name) {
-  this.name = name;
+        this.name = name;
 }
 
 Cat.prototype = {
-  constructor: Cat
+        constructor: Cat,
 };
 
 function Bear(name) {
-  this.name = name;
+        this.name = name;
 }
 
 Bear.prototype = {
-  constructor: Bear
+        constructor: Bear,
 };
 
-function Animal() { }
+function Animal() {}
 
 Animal.prototype = {
-  constructor: Animal,
-  eat: function() {
-    console.log("nom nom nom");
-  }
+        constructor: Animal,
+        eat() {
+                console.log('nom nom nom');
+        },
 };

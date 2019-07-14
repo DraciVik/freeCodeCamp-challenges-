@@ -36,21 +36,22 @@ If you have an instance let duck = new Bird(); and you call duck.eat(), this is 
 Override the fly() method for Penguin so that it returns "Alas, this is a flightless bird."
 */
 
-function Bird() { }
+function Bird() {}
 
-Bird.prototype.fly = function() { return "I am flying!"; };
+Bird.prototype.fly = function() {
+        return 'I am flying!';
+};
 
-function Penguin() { }
+function Penguin() {}
 Penguin.prototype = Object.create(Bird.prototype);
 Penguin.prototype.constructor = Penguin;
 
 // Add your code below this line
 Penguin.prototype.fly = function() {
-  return "Alas, this is a flightless bird.";
+        return 'Alas, this is a flightless bird.';
 };
-
 
 // Add your code above this line
 
-let penguin = new Penguin();
+const penguin = new Penguin();
 console.log(penguin.fly());

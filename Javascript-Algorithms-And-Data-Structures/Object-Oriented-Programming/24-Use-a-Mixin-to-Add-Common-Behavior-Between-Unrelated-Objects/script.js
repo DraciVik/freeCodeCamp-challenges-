@@ -32,21 +32,21 @@ Note how the mixin allows for the same fly method to be reused by unrelated obje
 Create a mixin named glideMixin that defines a method named glide. Then use the glideMixin to give both bird and boat the ability to glide.
 */
 
-let bird = {
-  name: "Donald",
-  numLegs: 2
+const bird = {
+        name: 'Donald',
+        numLegs: 2,
 };
 
-let boat = {
-  name: "Warrior",
-  type: "race-boat"
+const boat = {
+        name: 'Warrior',
+        type: 'race-boat',
 };
 
 // Add your code below this line
-let glideMixin = function(object) {
-  object.glide = function() {
-    return "gliiiiide";
-  };
+const glideMixin = function(object) {
+        object.glide = function() {
+                return 'gliiiiide';
+        };
 };
 
 glideMixin(bird);
