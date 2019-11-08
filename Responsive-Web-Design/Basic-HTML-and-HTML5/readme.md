@@ -1,7 +1,7 @@
 1. [Introduction to the basic HTML and HTML5 challenges](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/01-IntroductionToBasicHTMLAndHTML5.md)
 2. [Say Hello to HTML elements](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/02-SayHelloToHTMLElements.html)
 3. [Headline with the h2 element](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/03-HeadlineWithTheH2Element.html)
-4. [Inform with the paragraph element]https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/04-InformWithTheParagraphElement.html)
+4. [Inform with the paragraph element](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/04-InformWithTheParagraphElement.html)
 5. [Fill in the blank with placeholder text](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/05-FillInTheBlankWithPlaceholderText.html)
 6. [Uncomment HTML](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/06-UncommentHTML.html)
 7. [Comment out HTML](https://github.com/DraciVik/freeCodeCamp-challenges/blob/master/Responsive-Web-Design/Basic-HTML-and-HTML5/07-CommentOutHTML.html)
