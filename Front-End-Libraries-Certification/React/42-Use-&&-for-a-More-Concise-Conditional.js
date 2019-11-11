@@ -4,29 +4,28 @@
 
 // If the condition is true, the markup will be returned. If the condition is false, the operation will immediately return false after evaluating the condition and return nothing. You can include these statements directly in your JSX and string multiple conditions together by writing && after each one. This allows you to handle more complex conditional logic in your render() method without repeating a lot of code.
 
-
 // Solve the previous example again, so the h1 only renders if display is true, but use the && logical operator instead of an if/else statement.
 
 class MyComponent extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            display: true
-        }
-        this.toggleDisplay = this.toggleDisplay.bind(this);
-    }
-    toggleDisplay() {
-        this.setState({
-            display: !this.state.display
-        });
-    }
-    render() {
-        // change code below this line
-        return (
-            <div>
-                <button onClick={this.toggleDisplay}>Toggle Display</button>
-                {this.state.display && <h1>Displayed!</h1>}
-            </div>
-        );
-    }
-};
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: true
+    };
+    this.toggleDisplay = this.toggleDisplay.bind(this);
+  }
+  toggleDisplay() {
+    this.setState({
+      display: !this.state.display
+    });
+  }
+  render() {
+    // change code below this line
+    return (
+      <div>
+        <button onClick={this.toggleDisplay}>Toggle Display</button>
+        {this.state.display && <h1>Displayed!</h1>}
+      </div>
+    );
+  }
+}

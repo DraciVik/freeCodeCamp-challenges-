@@ -8,32 +8,30 @@
 // const Welcome = (props) => <h1>Hello, {props.user}!</h1>
 // It is standard to call this value props and when dealing with stateless functional components, you basically consider it as an argument to a function which returns JSX. You can access the value of the argument in the function body. With class components, you will see this is a little different.
 
-
 // There is a Calendar and CurrentDate component in the code editor. When rendering CurrentDate from the Calendar component, pass in a property of date assigned to the current date from JavaScript's Date object. Then access this prop in the CurrentDate component, showing its value within the p tags. Note that for prop values to be evaluated as JavaScript, they must be enclosed in curly brackets, for instance date={Date()}.
 
-
-const CurrentDate = (props) => {
-    return (
-        <div>
-            { /* change code below this line */}
-            <p>The current date is: {props.date} </p>
-            { /* change code above this line */}
-        </div>
-    );
+const CurrentDate = props => {
+  return (
+    <div>
+      {/* change code below this line */}
+      <p>The current date is: {props.date} </p>
+      {/* change code above this line */}
+    </div>
+  );
 };
 
 class Calendar extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        return (
-            <div>
-                <h3>What date is it?</h3>
-                { /* change code below this line */}
-                <CurrentDate date={Date()} />
-                { /* change code above this line */}
-            </div>
-        );
-    }
-};
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <h3>What date is it?</h3>
+        {/* change code below this line */}
+        <CurrentDate date={Date()} />
+        {/* change code above this line */}
+      </div>
+    );
+  }
+}
