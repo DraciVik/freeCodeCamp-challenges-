@@ -1,5 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster|Niconne&display=swap");
+
 body {
   background: url(background.svg);
+}
+
+#text {
+  font-family: "Niconne", cursive;
 }
 
 .App {
@@ -7,10 +13,64 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-content: center;
-  background-color: rgba(255, 255, 255, 0.3);
+  align-items: center;
 }
 
-p {
-  text-align: right;
+#quote-box {
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-box-shadow: 10px 10px 18px 0px rgba(48, 122, 133, 0.74);
+  -moz-box-shadow: 10px 10px 18px 0px rgba(48, 122, 133, 0.74);
+  box-shadow: 10px 10px 18px 0px rgba(48, 122, 133, 0.74);
+  display: flex;
+  flex-direction: column;
+}
+
+#author {
+  align-self: flex-end;
+  font-family: "Lobster", cursive;
+  margin-right: 1em;
+}
+
+#new-quote {
+  box-shadow: 3px 4px 1px 0px #5e96a8;
+  background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+  background-color: #ededed;
+  border-radius: 10px;
+  border: 1px solid #d6bcd6;
+  display: inline-block;
+  cursor: pointer;
+  color: #3a8a9e;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 7px 24px;
+  text-decoration: none;
+  text-shadow: 0px -2px 0px #e1e2ed;
+  width: 80%;
+  margin: 0 auto;
+}
+#new-quote:hover {
+  background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+  background-color: #bab1ba;
+}
+
+#tweet-quote {
+  align-self: flex-end;
+  margin: 1em;
+}
+
+.letter-spacing {
+  letter-spacing: -2px;
+}
+
+a#tweet-quote {
+  font-size: 2em;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  #quote-box {
+    max-width: 60%;
+  }
 }
