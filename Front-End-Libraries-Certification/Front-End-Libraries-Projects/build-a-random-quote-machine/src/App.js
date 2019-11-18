@@ -1,36 +1,71 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import Character from "./components/Character";
+import Image from "./components/Image";
+import Quote from "./components/Quote";
 import "./App.css";
-import { FaTwitterSquare } from "react-icons/fa";
 
-function App() {
-  return (
-    <div className="App">
-      <main id="quote-box">
-        <blockquote id="text">
-          <span id="quotation-mark">&rdquo;</span>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-          <span id="quotation-mark">&rdquo;</span>
-        </blockquote>
-        <p id="author">
-          <span class="letter-spacing">&mdash;&mdash;&mdash;&mdash;</span>Yo
-          mamas ass
-        </p>
-        <button id="new-quote">New Quote</button>
-        <a class="button" id="tweet-quote" title="Tweet this!" target="_blank">
-          <FaTwitterSquare />
-        </a>
-      </main>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: null,
+      quote: "",
+      image: "",
+      character: ""
+    };
+    this.renderNewQuote = this.renderNewQuote.bind(this);
+  }
+
+  async componentDidMount() {
+    const url = "https://thesimpsonsquoteapi.glitch.me/quotes?count=10";
+    const response = await fetch(url);
+    const data = await response.json();
+    const randomIndex = Math.floor(Math.random() * 10);
+    this.setState({
+      data,
+      quote: data[randomIndex].quote,
+      image: data[randomIndex].image,
+      character: data[randomIndex].character
+    });
+  }
+
+  renderNewQuote() {
+    const { data } = this.state;
+    const randomIndex = Math.floor(Math.random() * 10);
+    this.setState({
+      quote: data[randomIndex].quote,
+      image: data[randomIndex].image,
+      character: data[randomIndex].character
+    });
+  }
+
+  render() {
+    let { quote, image, character } = this.state;
+    return (
+      <div className="App">
+        <main id="quote-box">
+          <h1>The Simpsons quotes</h1>
+          <div className="quote-and-pic">
+            <Quote quote={quote} />
+            <Image image={image} character={character} />
+          </div>
+          <Character character={character} />
+          <div>
+            <button id="new-quote" onClick={this.renderNewQuote}>
+              New Quote
+            </button>
+          </div>
+          <a
+            className="button"
+            id="tweet-quote"
+            title="Tweet this!"
+            target="_blank"
+          ></a>
+        </main>
+      </div>
+    );
+  }
 }
 
 export default App;
