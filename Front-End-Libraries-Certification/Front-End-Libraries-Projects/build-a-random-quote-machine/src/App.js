@@ -3,6 +3,7 @@ import React from "react";
 import Character from "./components/Character";
 import Image from "./components/Image";
 import Quote from "./components/Quote";
+import { AiOutlineTwitter } from "react-icons/ai";
 import "./App.css";
 
 class App extends React.Component {
@@ -12,9 +13,11 @@ class App extends React.Component {
       data: null,
       quote: "",
       image: "",
-      character: ""
+      character: "",
+      characterDirection: ""
     };
     this.renderNewQuote = this.renderNewQuote.bind(this);
+    this.tweetQuote = this.tweetQuote.bind(this);
   }
 
   async componentDidMount() {
@@ -22,49 +25,82 @@ class App extends React.Component {
     const response = await fetch(url);
     const data = await response.json();
     const randomIndex = Math.floor(Math.random() * 10);
+    const { quote, image, character, characterDirection } = data[randomIndex];
     this.setState({
       data,
-      quote: data[randomIndex].quote,
-      image: data[randomIndex].image,
-      character: data[randomIndex].character
+      quote,
+      image,
+      character,
+      characterDirection
     });
   }
 
   renderNewQuote() {
     const { data } = this.state;
     const randomIndex = Math.floor(Math.random() * 10);
+    const { quote, image, character, characterDirection } = data[randomIndex];
     this.setState({
-      quote: data[randomIndex].quote,
-      image: data[randomIndex].image,
-      character: data[randomIndex].character
+      data,
+      quote,
+      image,
+      character,
+      characterDirection
     });
   }
 
+  tweetQuote() {
+    const { quote, character } = this.state;
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${quote} - ${character}`;
+    window.open(tweetUrl);
+  }
+
   render() {
-    let { quote, image, character } = this.state;
-    return (
-      <div className="App">
-        <main id="quote-box">
-          <h1>The Simpsons quotes</h1>
-          <div className="quote-and-pic">
-            <Quote quote={quote} />
-            <Image image={image} character={character} />
-          </div>
-          <Character character={character} />
-          <div>
-            <button id="new-quote" onClick={this.renderNewQuote}>
-              New Quote
-            </button>
-          </div>
-          <a
-            className="button"
-            id="tweet-quote"
-            title="Tweet this!"
-            target="_blank"
-          ></a>
-        </main>
-      </div>
-    );
+    let { data, quote, image, character, characterDirection } = this.state;
+    if (data) {
+      return (
+        <div className="App">
+          <main id="quote-box">
+            <h1>The Simpsons quotes</h1>
+            <div className="quote-and-pic">
+              <Quote quote={quote} />
+              <Image
+                direction={characterDirection}
+                image={image}
+                character={character}
+              />
+            </div>
+            <Character character={character} />
+            <div className="buttonGroup">
+              <button
+                className="button"
+                id="new-quote"
+                onClick={this.renderNewQuote}
+              >
+                New Quote
+              </button>
+              <a
+                className="button tweet"
+                id="tweet-quote"
+                title="Tweet this!"
+                target="_blank"
+                onClick={this.tweetQuote}
+              >
+                Tweet Quote
+                <AiOutlineTwitter className="tweet icon" />
+              </a>
+            </div>
+          </main>
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <main id="quote-box" className="noAPI">
+            "Loading Simpsons API..."
+          </main>
+        </div>
+      );
+    }
   }
 }
 
