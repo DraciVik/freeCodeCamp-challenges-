@@ -39,14 +39,23 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.noAPI {
+  height: 20vh;
+  justify-content: center;
+}
 
 #author {
   align-self: flex-end;
   margin-right: 1em;
 }
+.buttonGroup {
+  display: flex;
+  flex-direction: column;
+}
 
-button {
+.button {
   padding: 8px 18px;
+  font-size: 0.7em;
   border-radius: 6px;
   outline: none;
   border: 1px solid #aaa;
@@ -59,30 +68,35 @@ button {
   margin: 0 0 12px 0;
   transition: all 0.06s ease-in-out;
 }
-button:hover {
+.button:hover {
   outline: none;
   background-color: #d0d0d0;
   color: #333;
 }
-button:active {
+.button.tweet:hover {
+  outline: none;
+  background-color: #00acee;
+  color: #fff;
+}
+
+.button:active {
   outline: none;
   background-color: #eddfdf;
   color: #000;
 }
 
-#tweet-quote {
-  align-self: flex-end;
-  margin: 0 1em 0.1em 0;
+.tweet.icon {
+  font-size: 1.7em;
+  padding-left: 5px;
+}
+
+.button.tweet {
+  display: flex;
+  align-items: center;
 }
 
 .letter-spacing {
   letter-spacing: -2px;
-}
-
-a#tweet-quote {
-  font-size: 2em;
-  align-self: flex-end;
-  cursor: pointer;
 }
 
 .quote-and-pic {
@@ -99,8 +113,32 @@ img {
 #text {
   justify-content: center;
 }
+h1 {
+  text-align: center;
+}
+h1,
+#text,
+#author {
+  text-shadow: 0.5px 0.5px 0.5px rgba(70, 68, 68, 0.58);
+}
+
+.left {
+  order: -1;
+}
 
 @media screen and (min-width: 600px) {
+  .buttonGroup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  .button {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 900px) {
   #quote-box {
     max-width: 40%;
   }
