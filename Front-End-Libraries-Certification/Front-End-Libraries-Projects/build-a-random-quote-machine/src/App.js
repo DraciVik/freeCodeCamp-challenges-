@@ -82,8 +82,11 @@ class App extends React.Component {
                 className="button tweet"
                 id="tweet-quote"
                 title="Tweet this!"
+                role="button"
+                tabIndex="0"
                 target="_blank"
                 onClick={this.tweetQuote}
+                onKeyDown={this.tweetQuote}
               >
                 Tweet Quote
                 <AiOutlineTwitter className="tweet icon" />
