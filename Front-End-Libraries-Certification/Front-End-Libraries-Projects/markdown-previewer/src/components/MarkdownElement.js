@@ -8,5 +8,5 @@ export default function MarkdownElement({ text }) {
 
   let html = marked(text || "");
 
-  return <div dangerouslySetInnerHTML={{ __html: html }} />;
+  return <div id="preview" dangerouslySetInnerHTML={{ __html: html }} />;
 }
