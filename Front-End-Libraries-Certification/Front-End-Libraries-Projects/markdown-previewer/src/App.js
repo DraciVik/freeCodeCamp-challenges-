@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import placeholder from "./components/placeholder";
+import marked from "marked";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: ""
+    };
+    this.handleChange = this.handleChange.bind(this);
+
+    // Allows return button to render line breaks
+    marked.setOptions({
+      breaks: true
+    });
+  }
+
+  componentDidMount() {
+    this.setState({
+      value: placeholder
+    });
+  }
+
+  handleChange(event) {
+    this.setState({
+      value: event.target.value
+    });
+  }
+
+  render() {
+    const { value } = this.state;
+    const html = marked(value || "");
+    return (
+      <div className="App">
+        <label for="editor">
+          Editor
+          <textarea
+            value={this.state.value}
+            id="editor"
+            name="editor"
+            onChange={this.handleChange}
+          ></textarea>
+        </label>
+        <div>
+          <div id="preview" dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
