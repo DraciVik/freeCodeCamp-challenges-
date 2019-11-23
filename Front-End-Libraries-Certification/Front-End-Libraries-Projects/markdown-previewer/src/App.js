@@ -1,6 +1,7 @@
 import React from "react";
 import placeholder from "./components/placeholder";
 import marked from "marked";
+import MarkdownElement from "./components/MarkdownElement";
 import "./App.css";
 
 class App extends React.Component {
@@ -30,8 +31,6 @@ class App extends React.Component {
   }
 
   render() {
-    const { value } = this.state;
-    const html = marked(value || "");
     return (
       <div className="App">
         <label for="editor">
@@ -41,11 +40,9 @@ class App extends React.Component {
             id="editor"
             name="editor"
             onChange={this.handleChange}
-          ></textarea>
+          />
         </label>
-        <div>
-          <div id="preview" dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+        <MarkdownElement id="preview" text={this.state.value} />
       </div>
     );
   }
