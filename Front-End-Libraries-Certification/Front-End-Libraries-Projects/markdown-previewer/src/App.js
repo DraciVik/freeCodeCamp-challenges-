@@ -1,7 +1,7 @@
 import React from "react";
 import marked from "marked";
-import MarkdownElement from "./components/MarkdownElement";
 import placeholder from "./components/placeholder";
+import MarkdownRender from "./components/MarkdownRender";
 import MarkdownEditor from "./components/MarkdownEditor";
 import "./App.css";
 
@@ -37,7 +37,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <MarkdownEditor onChange={handleChange} text={value} />
-        <MarkdownElement text={value} />
+        <MarkdownRender text={value} />
       </div>
     );
   }
