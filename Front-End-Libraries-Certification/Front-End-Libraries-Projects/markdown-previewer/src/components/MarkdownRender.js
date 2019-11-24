@@ -2,6 +2,7 @@ import React from "react";
 import marked from "marked";
 
 export default function MarkdownRender({ text }) {
+  // Allows return button to render line breaks
   marked.setOptions({
     breaks: true
   });

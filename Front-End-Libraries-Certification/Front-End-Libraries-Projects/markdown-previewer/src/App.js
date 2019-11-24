@@ -1,22 +1,16 @@
 import React from "react";
-import marked from "marked";
 import placeholder from "./components/placeholder";
 import MarkdownRender from "./components/MarkdownRender";
 import MarkdownEditor from "./components/MarkdownEditor";
 import "./App.css";
 
-class App extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       value: ""
     };
     this.handleChange = this.handleChange.bind(this);
-
-    // Allows return button to render line breaks
-    marked.setOptions({
-      breaks: true
-    });
   }
 
   componentDidMount() {
@@ -42,5 +36,3 @@ class App extends React.Component {
     );
   }
 }
-
-export default App;
