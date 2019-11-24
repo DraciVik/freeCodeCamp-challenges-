@@ -1,0 +1,23 @@
+#drum-machine {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+#drum-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+#display-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#display {
+  grid-column: 2 / 4;
+  grid-row: 2 / 4;
+  margin: auto;
+}
