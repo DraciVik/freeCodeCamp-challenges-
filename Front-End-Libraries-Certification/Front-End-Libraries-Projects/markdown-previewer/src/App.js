@@ -1,6 +1,8 @@
 import React from "react";
-import placeholder from "./components/placeholder";
 import marked from "marked";
+import placeholder from "./components/placeholder";
+import MarkdownRender from "./components/MarkdownRender";
+import MarkdownEditor from "./components/MarkdownEditor";
 import "./App.css";
 
 class App extends React.Component {
@@ -30,22 +32,12 @@ class App extends React.Component {
   }
 
   render() {
+    const { handleChange } = this;
     const { value } = this.state;
-    const html = marked(value || "");
     return (
       <div className="App">
-        <label for="editor">
-          Editor
-          <textarea
-            value={this.state.value}
-            id="editor"
-            name="editor"
-            onChange={this.handleChange}
-          ></textarea>
-        </label>
-        <div>
-          <div id="preview" dangerouslySetInnerHTML={{ __html: html }} />
-        </div>
+        <MarkdownEditor onChange={handleChange} text={value} />
+        <MarkdownRender text={value} />
       </div>
     );
   }
