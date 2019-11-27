@@ -1,23 +1,48 @@
-#drum-machine {
-  width: 50%;
-  margin: 0 auto;
+body {
+  overflow: hidden;
+}
+div.App {
+  height: 100vh;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+  align-content: center;
+}
+#drum-machine {
+  display: grid;
+  grid-template-columns: 119px 100px;
+  background-color: rgb(146, 235, 146);
+  border: 2px solid gray;
 }
 #drum-buttons {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 33px);
+  grid-template-rows: repeat(3, 33px);
   grid-gap: 5px;
+  padding: 5px;
 }
 #display-container {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-columns: repeat(4, 1fr);
+  align-self: center;
+  justify-content: center;
 }
 
 #display {
-  grid-column: 2 / 4;
-  grid-row: 2 / 4;
-  margin: auto;
+  padding: 10px;
+  background-color: rgb(220, 227, 228);
+}
+
+.drum-pad {
+  -webkit-box-shadow: 0px 0px 2.4px 2.4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2.4px 2.4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2.4px 2.4px rgba(0, 0, 0, 0.75);
+}
+@media screen and (min-width: 600px) {
+  #drum-machine {
+    grid-template-columns: 218px 100px;
+  }
+
+  #drum-buttons {
+    grid-template-columns: repeat(3, 66px);
+    grid-template-rows: repeat(3, 66px);
+  }
 }
