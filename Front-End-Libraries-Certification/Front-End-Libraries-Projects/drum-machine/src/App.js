@@ -6,68 +6,41 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      display: ""
+      display: "Joe Mama"
     };
-    this.handleKeyPress = this.handleKeyPress.bind(this);
   }
-
-  componentDidMount() {
-    document.addEventListener("keydown", this.handleKeyPress);
-  }
-  componentWillUnmount() {
-    document.removeEventListener("keydown", this.handleKeyPress);
-  }
-
-  playSound(event) {
-    const audio = document.querySelector(`audio[data-key="${event.keyCode}"]`);
-    // const key = document.querySelector(`div[data-key="${event.keyCode}"]`);
-    console.log(event);
-    if (!audio) return;
-    // key.classList.add("playing");
-    audio.currentTime = 0;
-    audio.play();
-
-    this.setState({
-      display: "ok"
-    });
-  }
-
-  handleKeyPress(event) {
-    console.log(event); //TODOODODODODOODOD
-  }
-
   render() {
-    const drums = drumData.map(drum => {
-      return (
-        <div
-          key={drum.key}
-          role="button"
-          tabIndex="0"
-          data-key={drum.dataKey}
-          className="drum-pad"
-          onClick={() => this.playSound}
-        >
-          {drum.key}
-          {/*eslint-disable-next-line jsx-a11y/media-has-caption*/}
-          <audio
-            data-key={drum.dataKey}
-            src={drum.src}
-            type="audio/mp3"
-          ></audio>
-        </div>
-      );
-    });
-
-    const { display } = this.state;
-
     return (
-      <div className="App">
-        <main id="drum-machine">
-          <div id="drum-buttons">{drums}</div>
-          <div id="display-container">
-            <p id="display">{display}</p>
-          </div>
-        </main>
+      <div id="drum-machine">
+        <div className="drum-pad">
+          Q
+          <audio src="#" className="clip" id="Q" />
+        </div>
+        <div className="drum-pad">
+          W <audio src="#" className="clip" id="W" />
+        </div>
+        <div className="drum-pad">
+          E <audio src="#" className="clip" id="E" />
+        </div>
+        <div className="drum-pad">
+          A <audio src="#" className="clip" id="A" />
+        </div>
+        <div className="drum-pad">
+          S <audio src="#" className="clip" id="S" />
+        </div>
+        <div className="drum-pad">
+          D <audio src="#" className="clip" id="D" />
+        </div>
+        <div className="drum-pad">
+          Z <audio src="#" className="clip" id="Z" />
+        </div>
+        <div className="drum-pad">
+          X <audio src="#" className="clip" id="X" />
+        </div>
+        <div className="drum-pad">
+          C <audio src="#" className="clip" id="C" />
+        </div>
+        <div id="display"></div>
       </div>
     );
   }
