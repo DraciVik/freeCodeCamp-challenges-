@@ -1,48 +1,22 @@
-body {
-  overflow: hidden;
+html {
+  box-sizing: border-box;
 }
-div.App {
-  height: 100vh;
-  display: grid;
-  justify-items: center;
-  align-content: center;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
+
 #drum-machine {
+  background-color: teal;
   display: grid;
-  grid-template-columns: 119px 100px;
-  background-color: rgb(146, 235, 146);
-  border: 2px solid gray;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "drumpad display";
 }
-#drum-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 33px);
-  grid-template-rows: repeat(3, 33px);
-  grid-gap: 5px;
-  padding: 5px;
-}
-#display-container {
-  display: grid;
-  align-self: center;
-  justify-content: center;
+#drum-pads {
+  grid-area: drumpad;
 }
 
 #display {
-  padding: 10px;
-  background-color: rgb(220, 227, 228);
-}
-
-.drum-pad {
-  -webkit-box-shadow: 0px 0px 2.4px 2.4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 2.4px 2.4px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 2.4px 2.4px rgba(0, 0, 0, 0.75);
-}
-@media screen and (min-width: 600px) {
-  #drum-machine {
-    grid-template-columns: 218px 100px;
-  }
-
-  #drum-buttons {
-    grid-template-columns: repeat(3, 66px);
-    grid-template-rows: repeat(3, 66px);
-  }
+  grid-area: display;
 }
