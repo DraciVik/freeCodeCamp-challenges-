@@ -12,35 +12,37 @@ class App extends React.Component {
   render() {
     return (
       <div id="drum-machine">
-        <div className="drum-pad">
-          Q
-          <audio src="#" className="clip" id="Q" />
+        <div id="drum-pads">
+          <div className="drum-pad">
+            Q
+            <audio src="#" className="clip" id="Q" />
+          </div>
+          <div className="drum-pad">
+            W <audio src="#" className="clip" id="W" />
+          </div>
+          <div className="drum-pad">
+            E <audio src="#" className="clip" id="E" />
+          </div>
+          <div className="drum-pad">
+            A <audio src="#" className="clip" id="A" />
+          </div>
+          <div className="drum-pad">
+            S <audio src="#" className="clip" id="S" />
+          </div>
+          <div className="drum-pad">
+            D <audio src="#" className="clip" id="D" />
+          </div>
+          <div className="drum-pad">
+            Z <audio src="#" className="clip" id="Z" />
+          </div>
+          <div className="drum-pad">
+            X <audio src="#" className="clip" id="X" />
+          </div>
+          <div className="drum-pad">
+            C <audio src="#" className="clip" id="C" />
+          </div>
         </div>
-        <div className="drum-pad">
-          W <audio src="#" className="clip" id="W" />
-        </div>
-        <div className="drum-pad">
-          E <audio src="#" className="clip" id="E" />
-        </div>
-        <div className="drum-pad">
-          A <audio src="#" className="clip" id="A" />
-        </div>
-        <div className="drum-pad">
-          S <audio src="#" className="clip" id="S" />
-        </div>
-        <div className="drum-pad">
-          D <audio src="#" className="clip" id="D" />
-        </div>
-        <div className="drum-pad">
-          Z <audio src="#" className="clip" id="Z" />
-        </div>
-        <div className="drum-pad">
-          X <audio src="#" className="clip" id="X" />
-        </div>
-        <div className="drum-pad">
-          C <audio src="#" className="clip" id="C" />
-        </div>
-        <div id="display"></div>
+        <div id="display">Joe and Mike</div>
       </div>
     );
   }

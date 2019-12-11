@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+#drum-machine {
+  background-color: teal;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "drumpad display";
+}
+#drum-pads {
+  grid-area: drumpad;
+}
+
+#display {
+  grid-area: display;
+}
