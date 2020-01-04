@@ -1,22 +1,51 @@
 html {
   box-sizing: border-box;
+  margin: 0;
 }
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
-
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #drum-machine {
   background-color: teal;
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas: "drumpad display";
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
 }
 #drum-pads {
-  grid-area: drumpad;
+  margin-right: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 150px;
 }
 
 #display {
-  grid-area: display;
+  align-self: center;
+}
+
+.drum-pad {
+  border: 1px solid red;
+  width: 35px;
+  height: 35px;
+  margin: 5px 5px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.drum-pad-active {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
 }
