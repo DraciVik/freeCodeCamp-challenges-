@@ -4,6 +4,9 @@
 import React from "react";
 import Pad from "./components/Pad";
 import drumData from "./drumData";
+import Display from "./components/Display";
+import Switch from "./components/Switches";
+import VolumeSlider from "./components/VolumeSlider";
 import "./App.css";
 
 class App extends React.Component {
@@ -11,7 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       displayMessage: "Lets rock!",
-      mode: "piano",
+      mode: "drums",
       volume: "50",
       power: true
     };
@@ -22,22 +25,33 @@ class App extends React.Component {
   };
   render() {
     return (
-      <div id="drum-machine">
-        <div id="drum-pads">
-          {drumData.map(keyboardKey => {
-            return (
-              <Pad
-                display={this.display}
-                key={keyboardKey.letter}
-                keyValue={keyboardKey}
-                mode={this.state.mode}
-                volume={this.state.volume}
-              />
-            );
-          })}
+      <>
+        <h1>Drum Machine</h1>
+        <div id="drum-machine">
+          <Display
+            power={this.state.power}
+            display={this.display}
+            mode={this.state.mode}
+          />
+          <Switch />
+          <VolumeSlider />
+          <div id="drum-pads">
+            {drumData.map(keyboardKey => {
+              return (
+                <Pad
+                  power={this.state.power}
+                  display={this.display}
+                  key={keyboardKey.letter}
+                  keyValue={keyboardKey}
+                  mode={this.state.mode}
+                  volume={this.state.volume}
+                />
+              );
+            })}
+          </div>
+          <div id="display">{this.state.displayMessage}</div>
         </div>
-        <div id="display">{this.state.displayMessage}</div>
-      </div>
+      </>
     );
   }
 }

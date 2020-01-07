@@ -2,12 +2,6 @@
 import React from "react";
 
 export default class Pad extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-    this.playSound = this.playSound.bind(this);
-  }
-
   componentDidMount() {
     document.addEventListener("keydown", this.handleKeyPress);
   }
@@ -16,11 +10,11 @@ export default class Pad extends React.Component {
     document.addEventListener("keydown", this.handleKeyPress);
   }
 
-  handleKeyPress(e) {
+  handleKeyPress = e => {
     if (e.keyCode === this.props.keyValue.keyCode) this.playSound();
-  }
+  };
 
-  playSound = e => {
+  playSound = () => {
     const { keyValue, volume, display, mode } = this.props;
     let selectedSound = document.getElementById(keyValue["letter"]);
     let selectedButton = document.getElementById(
@@ -32,23 +26,29 @@ export default class Pad extends React.Component {
     display(keyValue[mode].title);
   };
 
-  //TODO: Power activation
   render() {
-    const { keyValue, mode } = this.props;
+    const { keyValue, mode, power } = this.props;
+    // Power - on
+    if (power) {
+      return (
+        <button
+          className="drum-pad"
+          id={keyValue["letter"] + "-button"}
+          onClick={this.playSound}
+        >
+          {keyValue["letter"]}
+          <audio
+            className="clip"
+            src={keyValue[mode].soundUrl}
+            id={keyValue["letter"]}
+            preload
+          />
+        </button>
+      );
+    }
+    // Power - off
     return (
-      <button
-        className="drum-pad"
-        id={keyValue["letter"] + "-button"}
-        onClick={this.playSound}
-      >
-        {keyValue["letter"]}
-        <audio
-          className="clip"
-          src={keyValue[mode].soundUrl}
-          id={keyValue["letter"]}
-          preload
-        />
-      </button>
+      <button id={keyValue["letter"] + "-button"}>{keyValue["letter"]}</button>
     );
   }
 }
