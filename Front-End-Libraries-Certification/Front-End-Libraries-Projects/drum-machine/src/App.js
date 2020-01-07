@@ -7,7 +7,7 @@ import drumData from "./drumData";
 import Display from "./components/Display";
 import Switch from "./components/Switches";
 import VolumeSlider from "./components/VolumeSlider";
-import "./App.css";
+import "./App.scss";
 
 class App extends React.Component {
   constructor(props) {
@@ -30,11 +30,14 @@ class App extends React.Component {
         <div id="drum-machine">
           <Display
             power={this.state.power}
-            display={this.display}
+            display={this.state.displayMessage}
             mode={this.state.mode}
           />
-          <Switch />
-          <VolumeSlider />
+          <div>
+            <Switch />
+            <VolumeSlider />
+            <hr />
+          </div>
           <div id="drum-pads">
             {drumData.map(keyboardKey => {
               return (
@@ -49,7 +52,7 @@ class App extends React.Component {
               );
             })}
           </div>
-          <div id="display">{this.state.displayMessage}</div>
+          <div>drum sets</div>
         </div>
       </>
     );
