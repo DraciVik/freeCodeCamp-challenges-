@@ -11,7 +11,8 @@ export default class Pad extends React.Component {
   }
 
   handleKeyPress = e => {
-    if (e.keyCode === this.props.keyValue.keyCode) this.playSound();
+    if (e.keyCode === this.props.keyValue.keyCode && this.props.power)
+      this.playSound();
   };
 
   playSound = () => {

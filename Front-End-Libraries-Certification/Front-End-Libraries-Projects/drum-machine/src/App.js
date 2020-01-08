@@ -7,6 +7,7 @@ import drumData from "./drumData";
 import Display from "./components/Display";
 import Switch from "./components/Switches";
 import VolumeSlider from "./components/VolumeSlider";
+import InstrumentModeButton from "./components/InstrumentModeButton";
 import "./App.scss";
 
 class App extends React.Component {
@@ -14,16 +15,23 @@ class App extends React.Component {
     super(props);
     this.state = {
       displayMessage: "Lets rock!",
-      mode: "drums",
+      mode: "piano",
       volume: "50",
       power: true
     };
+    this.changeInstrumentMode = this.changeInstrumentMode.bind(this);
   }
 
   display = value => {
     this.setState({ displayMessage: value });
   };
+
+  changeInstrumentMode(val) {
+    this.setState(prevState => ({ mode: val }));
+  }
+
   render() {
+    const modes = ["drums", "piano", "animals"];
     return (
       <>
         <h1>Drum Machine</h1>
@@ -34,8 +42,10 @@ class App extends React.Component {
             mode={this.state.mode}
           />
           <div>
-            <Switch />
-            <VolumeSlider />
+            <div id="controls">
+              <Switch />
+              <VolumeSlider />
+            </div>
             <hr />
           </div>
           <div id="drum-pads">
@@ -52,7 +62,21 @@ class App extends React.Component {
               );
             })}
           </div>
-          <div>drum sets</div>
+          <div>
+            <hr />
+            <div id="mode-buttons">
+              {modes.map(aMode => {
+                return (
+                  <InstrumentModeButton
+                    power={this.state.power}
+                    currentMode={this.state.mode}
+                    modeName={aMode}
+                    changeMode={this.changeInstrumentMode}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
       </>
     );

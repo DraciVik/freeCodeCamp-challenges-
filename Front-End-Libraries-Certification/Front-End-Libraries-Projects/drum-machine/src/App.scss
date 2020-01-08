@@ -15,19 +15,20 @@ body {
 }
 
 #drum-machine {
-  border: 1px solid red;
+  background: #296c67;
   border-radius: 10px;
-  width: 550px;
+  width: 350px;
   margin: auto;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 105px 50px 160px 80px;
 }
 
 #display {
   border-bottom: 1px solid green;
   display: grid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   grid-template-rows: repeat(2, 1fr);
-  height: 105px;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -43,6 +44,7 @@ body {
     & p {
       opacity: 0.7;
       text-shadow: 2px 2px #6a6a6a;
+      font-size: 0.7rem;
     }
   }
 }
@@ -75,5 +77,64 @@ body {
     #ffbd64,
     #ffb366,
     #ffaa69
+  );
+}
+.power-off {
+  background-image: linear-gradient(
+    to right top,
+    #050a12,
+    #181c24,
+    #282c36,
+    #383d4a,
+    #494f5e
+  );
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#drum-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 50px);
+  grid-gap: 5px 5px;
+  margin: 0 auto;
+}
+
+#mode-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  & button {
+    height: 30px;
+    width: 70px;
+  }
+}
+
+button {
+  color: white;
+  background: #105a5a;
+  border: none;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(31, 27, 31, 1);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(31, 27, 31, 1);
+  box-shadow: 1px 1px 1px 1px rgba(31, 27, 31, 1);
+
+  & :active {
+    background-color: red;
+  }
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
   );
 }
