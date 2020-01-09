@@ -15,19 +15,37 @@ class App extends React.Component {
     super(props);
     this.state = {
       displayMessage: "Lets rock!",
-      mode: "piano",
+      mode: "drums",
       volume: "50",
       power: true
     };
     this.changeInstrumentMode = this.changeInstrumentMode.bind(this);
+    this.changeButtonColor = this.changeButtonColor.bind(this);
   }
 
+  componentDidMount() {
+    let modeButton = document.getElementById(this.state.mode);
+    modeButton.classList.add(this.state.mode);
+  }
   display = value => {
     this.setState({ displayMessage: value });
   };
 
   changeInstrumentMode(val) {
+    let currentButton = document.getElementById(this.state.mode);
+    let nextButton = document.getElementById(val);
+
     this.setState(prevState => ({ mode: val }));
+    this.changeButtonColor(currentButton, nextButton, val);
+  }
+
+  changeButtonColor(currentButton, nextButton, val) {
+    if (currentButton === nextButton) {
+      return;
+    } else {
+      currentButton.classList.remove(this.state.mode);
+      nextButton.classList.add(val);
+    }
   }
 
   render() {

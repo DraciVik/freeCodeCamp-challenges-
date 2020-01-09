@@ -21,6 +21,7 @@ export default class Pad extends React.Component {
     let selectedButton = document.getElementById(
       keyValue["letter"] + "-button"
     );
+    selectedButton.classList.add("playing");
     selectedSound.currentTime = 0;
     selectedSound.onvolumechange = parseInt(volume) / 100;
     selectedSound.play();
