@@ -26,10 +26,19 @@ class App extends React.Component {
   componentDidMount() {
     let modeButton = document.getElementById(this.state.mode);
     modeButton.classList.add(this.state.mode);
+    const keys = Array.from(document.querySelectorAll(".drum-pad"));
+    keys.forEach(key =>
+      key.addEventListener("transitionend", this.removeTransition)
+    );
   }
   display = value => {
     this.setState({ displayMessage: value });
   };
+
+  removeTransition(e) {
+    if (e.propertyName !== "transform") return;
+    e.target.classList.remove("playing");
+  }
 
   changeInstrumentMode(val) {
     let currentButton = document.getElementById(this.state.mode);

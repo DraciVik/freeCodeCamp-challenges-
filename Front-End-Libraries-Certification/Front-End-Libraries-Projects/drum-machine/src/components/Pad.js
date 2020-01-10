@@ -15,7 +15,7 @@ export default class Pad extends React.Component {
       this.playSound();
   };
 
-  playSound = () => {
+  playSound = e => {
     const { keyValue, volume, display, mode } = this.props;
     let selectedSound = document.getElementById(keyValue["letter"]);
     let selectedButton = document.getElementById(
