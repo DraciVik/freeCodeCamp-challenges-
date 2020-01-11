@@ -15,15 +15,14 @@ export default class Pad extends React.Component {
       this.playSound();
   };
 
-  playSound = e => {
-    const { keyValue, volume, display, mode } = this.props;
+  playSound = () => {
+    const { keyValue, display, mode } = this.props;
     let selectedSound = document.getElementById(keyValue["letter"]);
     let selectedButton = document.getElementById(
       keyValue["letter"] + "-button"
     );
     selectedButton.classList.add("playing");
     selectedSound.currentTime = 0;
-    selectedSound.onvolumechange = parseInt(volume) / 100;
     selectedSound.play();
     display(keyValue[mode].title);
   };
@@ -43,7 +42,6 @@ export default class Pad extends React.Component {
             className="clip"
             src={keyValue[mode].soundUrl}
             id={keyValue["letter"]}
-            preload
           />
         </button>
       );

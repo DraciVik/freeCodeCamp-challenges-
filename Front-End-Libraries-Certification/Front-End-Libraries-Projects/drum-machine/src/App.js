@@ -5,8 +5,7 @@ import React from "react";
 import Pad from "./components/Pad";
 import drumData from "./drumData";
 import Display from "./components/Display";
-import Switch from "./components/Switches";
-import VolumeSlider from "./components/VolumeSlider";
+import Switch from "./components/Switch";
 import InstrumentModeButton from "./components/InstrumentModeButton";
 import "./App.scss";
 
@@ -16,7 +15,6 @@ class App extends React.Component {
     this.state = {
       displayMessage: "Lets rock!",
       mode: "drums",
-      volume: "50",
       power: true
     };
     this.changeInstrumentMode = this.changeInstrumentMode.bind(this);
@@ -57,6 +55,10 @@ class App extends React.Component {
     }
   }
 
+  switchPower = () => {
+    this.setState({ power: !this.state.power });
+  };
+
   render() {
     const modes = ["drums", "piano", "animals"];
     return (
@@ -69,11 +71,7 @@ class App extends React.Component {
             mode={this.state.mode}
           />
           <div>
-            <div id="controls">
-              <Switch />
-              <VolumeSlider />
-            </div>
-            <hr />
+            <Switch power={this.state.power} switchPower={this.switchPower} />
           </div>
           <div id="drum-pads">
             {drumData.map(keyboardKey => {
@@ -84,7 +82,6 @@ class App extends React.Component {
                   key={keyboardKey.letter}
                   keyValue={keyboardKey}
                   mode={this.state.mode}
-                  volume={this.state.volume}
                 />
               );
             })}
