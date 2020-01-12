@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css?family=Slabo+27px&display=swap");
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  background-color: rgb(71, 67, 67);
+  font-family: "Slabo 27px", serif;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+#drum-machine {
+  background: #296c67;
+  border-radius: 10px;
+  width: 350px;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 105px 50px 160px 80px;
+}
+
+#display {
+  border-bottom: 1px solid green;
+  display: grid;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  grid-template-rows: repeat(2, 1fr);
+  padding-left: 10px;
+  padding-right: 10px;
+
+  & h2 {
+    text-align: center;
+  }
+
+  & div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    & p {
+      opacity: 0.7;
+      text-shadow: 2px 2px #6a6a6a;
+      font-size: 0.7rem;
+    }
+  }
+}
+.drums {
+  background-image: linear-gradient(
+    to left bottom,
+    #7a639f,
+    #6f7db9,
+    #6596cb,
+    #62aed7,
+    #6ec5de
+  );
+}
+.piano {
+  background-image: linear-gradient(
+    to right top,
+    #81c25e,
+    #62b86a,
+    #43ad74,
+    #25a17c,
+    #009581
+  );
+}
+
+.animals {
+  background-image: linear-gradient(
+    to right top,
+    #ffd162,
+    #ffc762,
+    #ffbd64,
+    #ffb366,
+    #ffaa69
+  );
+}
+.power-off {
+  background-image: linear-gradient(
+    to right top,
+    #050a12,
+    #181c24,
+    #282c36,
+    #383d4a,
+    #494f5e
+  );
+}
+
+#controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+#drum-pads {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 50px);
+  grid-gap: 5px 5px;
+  margin: 0 auto;
+}
+
+#mode-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+
+  & button {
+    height: 30px;
+    width: 70px;
+  }
+}
+
+button {
+  color: white;
+  background: #105a5a;
+  border: none;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px 1px rgba(31, 27, 31, 1);
+  -moz-box-shadow: 1px 1px 1px 1px rgba(31, 27, 31, 1);
+  box-shadow: 1px 1px 1px 1px rgba(31, 27, 31, 1);
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+  transition: 0.2s;
+}
+
+.power-switch {
+  text-align: center;
+}
+@mixin outer-shadow {
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+@mixin inner-shadow {
+  -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
+}
+@mixin toggle {
+  width: 32px;
+  height: 20px;
+  border-radius: 10px;
+}
+
+/*** Power switch ***/
+.power-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+.ctrl-status {
+  font-size: 0.6rem;
+  opacity: 0.6;
+  line-height: 10px;
+}
+.toggle {
+  width: 70px;
+  height: 16px;
+  border-radius: 10px;
+  background: #485178;
+  cursor: pointer;
+  margin-top: 2px;
+  margin-bottom: 6px;
+  @include inner-shadow;
+}
+.toggle-on {
+  @include toggle;
+  background: green;
+  transform: translate(0, -2px);
+  @include outer-shadow;
+}
+.toggle-off {
+  @include toggle;
+  transform: translate(38px, -2px);
+  background: #ea4a70;
+  @include outer-shadow;
+}
+
+@media screen and (min-width: 600px) {
+  #drum-machine {
+    width: 550px;
+    grid-template-rows: 165px 79px 252px 126px;
+  }
+
+  #display {
+    font-size: 1.5rem;
+
+    & div p {
+      font-size: 1rem;
+    }
+  }
+  .toggle {
+    width: 100px;
+    height: 20px;
+  }
+  .ctrl-status {
+    font-size: 1rem;
+  }
+  .toggle-off {
+    transform: translate(70px, -2px);
+  }
+
+  #drum-pads {
+    grid-template-columns: repeat(3, 157px);
+    grid-template-rows: repeat(3, 78px);
+    grid-gap: 8px 8px;
+    margin: 0 auto;
+  }
+
+  #mode-buttons button {
+    height: 48px;
+    width: 110px;
+  }
+}
