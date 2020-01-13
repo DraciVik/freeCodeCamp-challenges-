@@ -18,15 +18,17 @@ h1 {
   text-align: center;
 }
 
+//Whole app
 #drum-machine {
   background: #296c67;
   border-radius: 10px;
   width: 350px;
   margin: auto;
   display: grid;
-  grid-template-rows: 105px 50px 160px 80px;
+  grid-template-rows: 105px 45px 160px 80px;
 }
 
+// Display
 #display {
   border-bottom: 1px solid green;
   display: grid;
@@ -52,6 +54,7 @@ h1 {
     }
   }
 }
+// Display background
 .drums {
   background-image: linear-gradient(
     to left bottom,
@@ -90,15 +93,10 @@ h1 {
     #181c24,
     #282c36,
     #383d4a,
-    #494f5e
+    #020303
   );
 }
-
-#controls {
-  display: flex;
-  justify-content: space-between;
-}
-
+// drum buttons
 #drum-pads {
   display: grid;
   grid-template-columns: repeat(3, 100px);
@@ -107,6 +105,7 @@ h1 {
   margin: 0 auto;
 }
 
+// Different modes
 #mode-buttons {
   margin-top: 20px;
   display: flex;
@@ -119,6 +118,7 @@ h1 {
   }
 }
 
+// every button
 button {
   color: white;
   background: #105a5a;
@@ -140,6 +140,7 @@ hr {
   );
 }
 
+// transformation when selected
 .playing {
   transform: scale(1.1);
   border-color: #ffc600;
@@ -147,9 +148,6 @@ hr {
   transition: 0.2s;
 }
 
-.power-switch {
-  text-align: center;
-}
 @mixin outer-shadow {
   -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.3);
@@ -205,7 +203,7 @@ hr {
 @media screen and (min-width: 600px) {
   #drum-machine {
     width: 550px;
-    grid-template-rows: 165px 79px 252px 126px;
+    grid-template-rows: 165px 50px 252px 126px;
   }
 
   #display {

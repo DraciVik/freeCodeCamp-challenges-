@@ -20,13 +20,22 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let modeButton = document.getElementById(this.state.mode);
-    modeButton.classList.add(this.state.mode);
+    const {mode} =   this.state;
+    let modeButton = document.getElementById(mode);
+    modeButton.classList.add(mode);
     const keys = Array.from(document.querySelectorAll(".drum-pad"));
     keys.forEach(key =>
       key.addEventListener("transitionend", this.removeTransition)
     );
   }
+
+  componentWillUnmount() {
+    const keys = Array.from(document.querySelectorAll(".drum-pad"));
+    keys.forEach(key =>
+      key.addEventListener("transitionend", this.removeTransition)
+    );
+  }
+  
   display = value => {
     this.setState({ displayMessage: value });
   };
@@ -37,7 +46,8 @@ class App extends React.Component {
   }
 
   changeInstrumentMode = (val) => {
-    let currentButton = document.getElementById(this.state.mode);
+    const {mode} = this.state;
+    let currentButton = document.getElementById(mode);
     let nextButton = document.getElementById(val);
 
     this.setState(prevState => ({ mode: val }));
@@ -45,41 +55,44 @@ class App extends React.Component {
   }
 
   changeButtonColor =(currentButton, nextButton, val) => {
+    const {mode} = this.state;
     if (currentButton === nextButton) {
       return;
     } else {
-      currentButton.classList.remove(this.state.mode);
+      currentButton.classList.remove(mode);
       nextButton.classList.add(val);
     }
   }
 
   switchPower = () => {
-    this.setState({ power: !this.state.power });
+    const {power} = this.state;
+    this.setState({ power: !power });
   };
 
   render() {
     const modes = ["drums", "piano", "animals"];
+    const {power, displayMessage, mode} = this.state;
     return (
       <>
         <h1>Drum Machine</h1>
         <div id="drum-machine">
           <Display
-            power={this.state.power}
-            display={this.state.displayMessage}
-            mode={this.state.mode}
+            power={power}
+            display={displayMessage}
+            mode={mode}
           />
           <div>
-            <Switch power={this.state.power} switchPower={this.switchPower} />
+            <Switch power={power} switchPower={this.switchPower} />
           </div>
           <div id="drum-pads">
             {drumData.map(keyboardKey => {
               return (
                 <Pad
-                  power={this.state.power}
+                  power={power}
                   display={this.display}
                   key={keyboardKey.letter}
                   keyValue={keyboardKey}
-                  mode={this.state.mode}
+                  mode={mode}
                 />
               );
             })}
@@ -90,8 +103,8 @@ class App extends React.Component {
               {modes.map(aMode => {
                 return (
                   <InstrumentModeButton
-                    power={this.state.power}
-                    currentMode={this.state.mode}
+                    power={power}
+                    currentMode={mode}
                     modeName={aMode}
                     changeMode={this.changeInstrumentMode}
                   />
