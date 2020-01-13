@@ -17,8 +17,6 @@ class App extends React.Component {
       mode: "drums",
       power: true
     };
-    this.changeInstrumentMode = this.changeInstrumentMode.bind(this);
-    this.changeButtonColor = this.changeButtonColor.bind(this);
   }
 
   componentDidMount() {
@@ -33,12 +31,12 @@ class App extends React.Component {
     this.setState({ displayMessage: value });
   };
 
-  removeTransition(e) {
+  removeTransition = (e) => {
     if (e.propertyName !== "transform") return;
     e.target.classList.remove("playing");
   }
 
-  changeInstrumentMode(val) {
+  changeInstrumentMode = (val) => {
     let currentButton = document.getElementById(this.state.mode);
     let nextButton = document.getElementById(val);
 
@@ -46,7 +44,7 @@ class App extends React.Component {
     this.changeButtonColor(currentButton, nextButton, val);
   }
 
-  changeButtonColor(currentButton, nextButton, val) {
+  changeButtonColor =(currentButton, nextButton, val) => {
     if (currentButton === nextButton) {
       return;
     } else {
