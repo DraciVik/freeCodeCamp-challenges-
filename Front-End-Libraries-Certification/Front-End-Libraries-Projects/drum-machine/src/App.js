@@ -7,6 +7,7 @@ import drumData from "./drumData";
 import Display from "./components/Display";
 import Switch from "./components/Switch";
 import InstrumentModeButton from "./components/InstrumentModeButton";
+import Footer from "./components/Footer";
 import "./App.scss";
 
 class App extends React.Component {
@@ -35,7 +36,7 @@ class App extends React.Component {
       key.addEventListener("transitionend", this.removeTransition)
     );
   }
-  
+
   display = value => {
     this.setState({ displayMessage: value });
   };
@@ -113,6 +114,7 @@ class App extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   }
