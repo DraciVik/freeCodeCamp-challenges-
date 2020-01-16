@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(214, 205, 205);
+  background-color: rgb(129, 126, 126);
 }
 
 #calculator {
@@ -29,7 +29,10 @@ body {
   font-size: 0.8em;
   color: yellow;
 }
-
+button {
+  background-color: rgb(92, 77, 99);
+  color: white;
+}
 #buttons {
   display: grid;
   grid-template-rows: repeat(5, 1fr);
@@ -72,6 +75,10 @@ button {
 
 #nine {
   grid-area: nine;
+}
+
+#subtract {
+  grid-area: subtract;
 }
 
 #four {
