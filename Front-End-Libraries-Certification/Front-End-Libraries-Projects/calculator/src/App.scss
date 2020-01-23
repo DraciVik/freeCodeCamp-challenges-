@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron&display=swap");
+body {
+  background-color: rgb(129, 126, 126);
+}
+
+#calculator {
+  display: grid;
+  grid-template-rows: 50px auto;
+  text-align: center;
+  font-size: 1.2em;
+}
+#display {
+  margin: 0 auto;
+  width: 346px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  font-family: "Orbitron", sans-serif;
+}
+
+#result,
+#calculation {
+  padding: 0;
+  padding-right: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  text-align: end;
+}
+
+#result {
+  font-size: 0.8em;
+  color: yellow;
+}
+button {
+  background-color: rgb(92, 77, 99);
+  color: white;
+}
+#buttons {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "clear clear divide multiply"
+    "seven eight nine subtract"
+    "four five six add"
+    "one two three equals"
+    "zero zero decimal equals";
+  width: 350px;
+  height: 450px;
+  margin: auto;
+}
+
+button {
+  font-size: 1.2em;
+}
+
+/* Button placement */
+#clear {
+  grid-area: clear;
+  background-color: rgba(185, 10, 10, 0.904);
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#multiply {
+  grid-area: multiply;
+}
+
+#seven {
+  grid-area: seven;
+}
+
+#eight {
+  grid-area: eight;
+}
+
+#nine {
+  grid-area: nine;
+}
+
+#subtract {
+  grid-area: subtract;
+}
+
+#four {
+  grid-area: four;
+}
+
+#five {
+  grid-area: five;
+}
+
+#six {
+  grid-area: six;
+}
+
+#one {
+  grid-area: one;
+}
+
+#two {
+  grid-area: two;
+}
+
+#three {
+  grid-area: three;
+}
+
+#zero {
+  grid-area: zero;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#equals {
+  grid-area: equals;
+  background-color: rgb(42, 42, 141);
+}
