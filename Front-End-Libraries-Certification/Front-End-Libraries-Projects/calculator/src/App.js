@@ -1,11 +1,12 @@
 import React from "react";
+import Display from "./components/Display";
 import "./App.scss";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      result: 0,
+      result: "",
       calculation: "",
       operands: [],
       operators: []
@@ -14,70 +15,155 @@ class App extends React.Component {
 
   clearAll = () => {
     this.setState({
-      result: 0,
+      result: "",
       calculation: "",
       operands: [],
       operators: []
     });
   };
 
+  handleDecimal = e => {
+    console.log(e.currentTarget.textContent);
+    const { calculation, result, operands, operators } = this.state;
+    let signs = "/*-+";
+
+    if (calculation === "") {
+      this.setState({
+        calculation: "0."
+      });
+    } else if (signs.indexOf(calculation) !== -1 && operands > operators) {
+      this.setState(prevState => ({
+        calculation: "0.",
+        operators: prevState.operators.concat(calculation)
+      }));
+    } else if (calculation.indexOf(".") === -1) {
+      this.setState(prevState => ({
+        calculation: prevState.calculation.concat(".")
+      }));
+    }
+  };
+
+  addNumberToCalculation = e => {
+    let {
+      operands,
+      operators,
+      result,
+      calculation: myCalculation
+    } = this.state;
+    const signs = "/*-+";
+    const currentText = e.currentTarget.textContent;
+
+    //When the application starts we need to enter operands first on which to operate
+    if (operands.length === 0) {
+      // When a sign is clicked the operand is pushed into the operands array
+      // Makes sure there are no trailing zeroes
+      if (myCalculation === "0" && currentText !== "0") {
+        this.setState({
+          calculation: currentText
+        });
+      }
+      // If no operands are pushed yet, the number gets bigger
+      if (myCalculation !== "0") {
+        this.setState(prevState => ({
+          calculation: (prevState.calculation += currentText)
+        }));
+      }
+    }
+    // If operators and operands array length is equal and there is a sign entered - the sign is pushed to operators array
+    if (
+      operators.length === operands.length &&
+      signs.indexOf(myCalculation === -1) &&
+      operators.length !== 0
+    ) {
+      if (myCalculation === "0" && currentText !== "0") {
+        this.setState(prevState => ({
+          calculation: currentText
+        }));
+      }
+      // If no operands are pushed yet, the number gets bigger
+      if (myCalculation !== "0") {
+        this.setState(prevState => ({
+          calculation: (prevState.calculation += currentText)
+        }));
+      }
+    }
+
+    if (
+      result === operands[0] &&
+      operators.length === 0 &&
+      myCalculation[0] === "0" &&
+      myCalculation[1] === "."
+    ) {
+      this.setState(prevState => ({
+        calculation: prevState.calculation.concat(currentText)
+      }));
+    }
+
+    if (
+      operators.length < operands.length &&
+      signs.indexOf(myCalculation) !== -1
+    ) {
+      this.setState(prevState => ({
+        operators: operators.concat(prevState.calculation),
+        calculation: currentText
+      }));
+    }
+  };
+
   applySign = e => {
-    let { calculation, operands, operators } = this.state;
+    const currentText = e.currentTarget.textContent;
+    let {
+      calculation: myCalculation,
+      operands: stateOperands,
+      operators
+    } = this.state;
     let signs = "/*-+";
     // Checks if an operator is pressed first before having anything to operate on
     if (
-      operands.length === 0 &&
+      stateOperands.length === 0 &&
       operators.length === 0 &&
-      signs.indexOf(calculation) !== -1
+      signs.indexOf(myCalculation) !== -1
     ) {
       return;
     }
 
     // If we change the sign
-    if (signs.indexOf(calculation) !== -1) {
+    if (signs.indexOf(myCalculation) !== -1) {
       this.setState({
-        calculation: e.target.innerText
+        calculation: currentText
       });
     }
 
     // If the operands array is not empty and the calculation is a number
     if (
-      operands.length === 0 &&
-      calculation &&
-      signs.indexOf(calculation) === -1
+      stateOperands.length === 0 &&
+      myCalculation &&
+      signs.indexOf(myCalculation) === -1
     ) {
-      operands.push(calculation);
+      // operands.push(calculation);
 
-      this.setState({
-        calculation: e.target.innerText
-      });
+      this.setState(prevState => ({
+        operands: stateOperands.concat(prevState.calculation),
+        calculation: currentText
+      }));
     }
     if (
-      operands.length === operators.length &&
-      calculation &&
-      signs.indexOf(calculation) === -1
+      stateOperands.length === operators.length &&
+      myCalculation &&
+      signs.indexOf(myCalculation) === -1
     ) {
-      operands.push(calculation);
-      this.setState({
-        calculation: e.target.innerText
-      });
+      // operands.push(myCalculation);
+      this.setState(prevState => ({
+        operands: stateOperands.concat(myCalculation),
+        calculation: currentText
+      }));
     }
-  };
-
-  equals = () => {
-    const { calculation, operands } = this.state;
-    const signs = "/*-+";
-    // checks if calculation is not an empty string and it's not an operator
-    if (calculation && signs.indexOf(calculation) === -1) {
-      operands.push(calculation);
-    }
-    this.calculate();
   };
 
   calculate = () => {
-    const { operands, operators } = this.state;
-    let result = operands[0];
-    const math_it_up = {
+    let { operands, operators } = this.state;
+    let newResult = operands[0];
+    const mathItUp = {
       "+": function(x, y) {
         return x + y;
       },
@@ -92,70 +178,40 @@ class App extends React.Component {
       }
     };
 
-    for (let i = 1; i < operators.length; i += 1) {}
-
-    // let newResult = eval(this.state.calculation);
-    // this.setState({ result: newResult, calculation: "" });
+    for (let i = 0; i < operators.length; i += 1) {
+      newResult = mathItUp[operators[i]](
+        Number(newResult),
+        Number(operands[i + 1])
+      );
+    }
+    this.setState({
+      result: newResult,
+      calculation: "",
+      operands: [newResult],
+      operators: []
+    });
   };
 
-  addNumberToCalculation = e => {
-    let { operands, operators, calculation: myCalculation } = this.state;
+  equals = () => {
+    const { calculation, operands: stateOperands } = this.state;
     const signs = "/*-+";
+    // checks if calculation is not an empty string and it's not an operator
+    if (calculation && signs.indexOf(calculation) === -1) {
+      // this.setState(prevState => ({
+      //    operands: [...prevState.operands, calculation]
+      // }));
 
-    //When the application starts we need to enter operands first on which to operate
-    if (operands.length === 0) {
-      // When a sign is clicked the operand is pushed into the operands array
-      // Makes sure there are no trailing zeroes
-      if (myCalculation === "0" && e.target.innerText !== "0") {
-        this.setState({
-          calculation: e.target.innerText
-        });
-      }
-      // If no operands are pushed yet, the number gets bigger
-      if (myCalculation !== "0") {
-        this.setState({
-          calculation: (myCalculation += e.target.innerText)
-        });
-      }
+      /* For some reason when I try to update state  like I'm suposed to with setState and prevState (see above) the state doesn't update as it should and I keep getting a NaN as a result. Thats why I'm leaving this VERY WRONG way to update state for the time being.  */
+      stateOperands.push(calculation);
     }
-    // If operators and operands array length is equal and there is a sign entered - the sign is pushed to operators array
-    if (
-      operators.length === operands.length &&
-      signs.indexOf(myCalculation === -1) &&
-      operators.length !== 0
-    ) {
-      if (myCalculation === "0" && e.target.innerText !== "0") {
-        this.setState({
-          calculation: e.target.innerText
-        });
-      }
-      // If no operands are pushed yet, the number gets bigger
-      if (myCalculation !== "0") {
-        this.setState({
-          calculation: (myCalculation += e.target.innerText)
-        });
-      }
-    }
-    if (
-      operators.length < operands.length &&
-      signs.indexOf(myCalculation) !== -1
-    ) {
-      operators.push(myCalculation);
-      this.setState({
-        calculation: e.target.innerText
-      });
-    }
+    this.calculate();
   };
 
   render() {
+    let { result, calculation } = this.state;
     return (
       <div id="calculator">
-        <div id="display">
-          <div id="result">{this.state.result}</div>
-          <div id="calculation">
-            {this.state.calculation === "" ? "0" : this.state.calculation}
-          </div>
-        </div>
+        <Display result={result} calculation={calculation} />
         <div id="buttons">
           <button id="clear" onClick={this.clearAll}>
             AC
@@ -197,7 +253,7 @@ class App extends React.Component {
           <button id="zero" onClick={this.addNumberToCalculation}>
             0
           </button>
-          <button id="decimal" onClick={this.addNumberToCalculation}>
+          <button id="decimal" onClick={this.handleDecimal}>
             .
           </button>
 
