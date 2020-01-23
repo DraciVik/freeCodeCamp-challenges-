@@ -1,5 +1,6 @@
 import React from "react";
 import Display from "./components/Display";
+import Footer from "./components/Footer";
 import "./App.scss";
 
 class App extends React.Component {
@@ -267,6 +268,7 @@ class App extends React.Component {
             =
           </button>
         </div>
+        <Footer />
       </div>
     );
   }
